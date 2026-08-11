@@ -3,6 +3,7 @@
 ========================================= */
 
 .game-tagline {
+
     color: #dddddd !important;
 
     font-size: 0.85rem;
@@ -14,6 +15,7 @@
     margin-top: -8px;
 
     margin-bottom: 15px !important;
+
 }
 
 
@@ -162,5 +164,171 @@
         font-size: 1.6rem;
 
     }
+
+}
+
+
+/* =========================================
+   AIO DEV BINARY FLASH
+========================================= */
+
+/*
+   This is intentionally subtle.
+
+   The binary is invisible most of the time
+   and briefly appears every 10 seconds.
+*/
+
+#binary-flash {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    pointer-events: none;
+
+    opacity: 0;
+
+    overflow: hidden;
+
+    color: rgba(255, 255, 255, 0.18);
+
+    font-family:
+        "Courier New",
+        Courier,
+        monospace;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    line-height: 1.8;
+
+    padding: 20px;
+
+    white-space: pre-wrap;
+
+    text-shadow:
+        0 0 8px rgba(255, 255, 255, 0.15);
+
+}
+
+
+/* =========================================
+   BINARY FLASH ANIMATION
+========================================= */
+
+#binary-flash.active {
+
+    animation:
+        binaryFlash 1.2s ease-in-out forwards;
+
+}
+
+
+@keyframes binaryFlash {
+
+    0% {
+
+        opacity: 0;
+
+    }
+
+
+    15% {
+
+        opacity: 0.75;
+
+    }
+
+
+    25% {
+
+        opacity: 0.25;
+
+    }
+
+
+    40% {
+
+        opacity: 0.65;
+
+    }
+
+
+    55% {
+
+        opacity: 0.15;
+
+    }
+
+
+    70% {
+
+        opacity: 0.5;
+
+    }
+
+
+    100% {
+
+        opacity: 0;
+
+    }
+
+}
+
+
+/* =========================================
+   OPTIONAL BINARY EDGE EFFECT
+========================================= */
+
+/*
+   Very subtle binary texture around the
+   outside edge of the screen.
+*/
+
+#binary-flash::before {
+
+    content:
+        "01001001 01001111 01000100 01000101 01010110";
+
+    position: absolute;
+
+    top: 8px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    opacity: 0.4;
+
+}
+
+
+#binary-flash::after {
+
+    content:
+        "01000011 01001111 01000100 01000101";
+
+    position: absolute;
+
+    bottom: 8px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    opacity: 0.4;
 
 }
