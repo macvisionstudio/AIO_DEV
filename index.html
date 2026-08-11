@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-        content="AIO DEV - All In One Development. Independent game development, programming, tools, and Unity projects.">
+        content="AIO DEV - All In One Development. Independent games, code, tools, and development projects.">
 
     <title>AIO DEV | All In One Development</title>
 
@@ -16,14 +16,7 @@
 <body>
 
     <!-- =========================================
-         SUBTLE BINARY EFFECT
-    ========================================== -->
-
-    <div id="binary-flash" aria-hidden="true"></div>
-
-
-    <!-- =========================================
-         NAVIGATION
+         HEADER / NAVIGATION
     ========================================== -->
 
     <header class="site-header">
@@ -35,7 +28,16 @@
                 <span class="logo-sub">DEV</span>
             </a>
 
-            <nav class="navigation">
+            <!-- Mobile Menu Button -->
+            <button
+                class="mobile-menu-button"
+                id="mobileMenuButton"
+                aria-label="Open navigation menu"
+                aria-expanded="false">
+                ☰
+            </button>
+
+            <nav class="navigation" id="mainNavigation">
 
                 <a href="#games">Games</a>
 
@@ -53,10 +55,15 @@
 
 
     <!-- =========================================
-         HERO
+         MAIN
     ========================================== -->
 
     <main>
+
+
+        <!-- =====================================
+             HERO
+        ====================================== -->
 
         <section class="hero">
 
@@ -71,9 +78,11 @@
                 </h1>
 
                 <p class="hero-description">
+
                     Independent game development,
                     programming, tools, experiments,
                     and everything in between.
+
                 </p>
 
                 <a href="#games" class="button primary-button">
@@ -85,9 +94,9 @@
         </section>
 
 
-        <!-- =========================================
+        <!-- =====================================
              GAMES
-        ========================================== -->
+        ====================================== -->
 
         <section id="games" class="section">
 
@@ -104,8 +113,8 @@
                     </h2>
 
                     <p>
-                        Games and projects currently being
-                        developed by AIO DEV.
+                        Games currently being developed
+                        by AIO DEV.
                     </p>
 
                 </div>
@@ -114,7 +123,9 @@
                 <div class="games-grid">
 
 
-                    <!-- RUZTY NUTZ RACING -->
+                    <!-- =========================
+                         RUZTY NUTZ RACING
+                    ========================== -->
 
                     <article class="game-card">
 
@@ -128,9 +139,17 @@
 
                         <div class="game-content">
 
-                            <span class="game-status">
-                                IN DEVELOPMENT
-                            </span>
+                            <div class="game-meta">
+
+                                <span class="game-status">
+                                    IN DEVELOPMENT
+                                </span>
+
+                                <span class="platform-badge pc">
+                                    PC
+                                </span>
+
+                            </div>
 
                             <h3>
                                 Ruzty Nutz Racing
@@ -151,9 +170,13 @@
                             <div class="game-buttons">
 
                                 <a href="#"
-                                   class="button primary-button">
-                                    VIEW GAME
+                                   class="button primary-button pc-download">
+                                    DOWNLOAD
                                 </a>
+
+                                <span class="mobile-platform-message">
+                                    PC GAME — AVAILABLE ON DESKTOP
+                                </span>
 
                             </div>
 
@@ -162,7 +185,9 @@
                     </article>
 
 
-                    <!-- ENDANGERED SPECIES -->
+                    <!-- =========================
+                         ENDANGERED SPECIES
+                    ========================== -->
 
                     <article class="game-card">
 
@@ -176,9 +201,17 @@
 
                         <div class="game-content">
 
-                            <span class="game-status">
-                                IN DEVELOPMENT
-                            </span>
+                            <div class="game-meta">
+
+                                <span class="game-status">
+                                    IN DEVELOPMENT
+                                </span>
+
+                                <span class="platform-badge pc">
+                                    PC
+                                </span>
+
+                            </div>
 
                             <h3>
                                 Endangered Species
@@ -199,9 +232,13 @@
                             <div class="game-buttons">
 
                                 <a href="#"
-                                   class="button secondary-button">
-                                    VIEW GAME
+                                   class="button primary-button pc-download">
+                                    DOWNLOAD
                                 </a>
+
+                                <span class="mobile-platform-message">
+                                    PC GAME — AVAILABLE ON DESKTOP
+                                </span>
 
                             </div>
 
@@ -210,7 +247,9 @@
                     </article>
 
 
-                    <!-- ESMOBILE -->
+                    <!-- =========================
+                         ESMOBILE
+                    ========================== -->
 
                     <article class="game-card">
 
@@ -224,9 +263,17 @@
 
                         <div class="game-content">
 
-                            <span class="game-status">
-                                PLANNED
-                            </span>
+                            <div class="game-meta">
+
+                                <span class="game-status">
+                                    PLANNED
+                                </span>
+
+                                <span class="platform-badge mobile">
+                                    MOBILE
+                                </span>
+
+                            </div>
 
                             <h3>
                                 ESmobile
@@ -245,8 +292,8 @@
                             <div class="game-buttons">
 
                                 <a href="#"
-                                   class="button secondary-button">
-                                    PROJECT INFO
+                                   class="button primary-button mobile-download">
+                                    MOBILE GAME
                                 </a>
 
                             </div>
@@ -256,7 +303,9 @@
                     </article>
 
 
-                    <!-- GOLF -->
+                    <!-- =========================
+                         GOLF
+                    ========================== -->
 
                     <article class="game-card">
 
@@ -270,9 +319,17 @@
 
                         <div class="game-content">
 
-                            <span class="game-status">
-                                PLANNED
-                            </span>
+                            <div class="game-meta">
+
+                                <span class="game-status">
+                                    PLANNED
+                                </span>
+
+                                <span class="platform-badge mobile">
+                                    MOBILE
+                                </span>
+
+                            </div>
 
                             <h3>
                                 Golf
@@ -283,15 +340,72 @@
                             </p>
 
                             <p>
-                                A mobile version of the classic card game
+                                A mobile version of a classic card game
                                 featuring AI opponents and multiplayer.
                             </p>
 
                             <div class="game-buttons">
 
                                 <a href="#"
-                                   class="button secondary-button">
-                                    PROJECT INFO
+                                   class="button primary-button mobile-download">
+                                    MOBILE GAME
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =========================
+                         HIDDEN DIMENSIONS
+                    ========================== -->
+
+                    <article class="game-card hidden-dimensions-card">
+
+                        <div class="game-image">
+
+                            <span class="image-placeholder">
+                                HIDDEN DIMENSIONS
+                            </span>
+
+                        </div>
+
+                        <div class="game-content">
+
+                            <div class="game-meta">
+
+                                <span class="game-status">
+                                    IN DEVELOPMENT
+                                </span>
+
+                                <span class="platform-badge mobile">
+                                    MOBILE
+                                </span>
+
+                            </div>
+
+                            <h3>
+                                Hidden Dimensions
+                            </h3>
+
+                            <p class="game-tagline">
+                                Discover what lies beyond.
+                            </p>
+
+                            <p>
+                                A mobile puzzle game built around
+                                exploration, hidden patterns,
+                                ancient writing, and dimensions
+                                that may not be what they seem.
+                            </p>
+
+                            <div class="game-buttons">
+
+                                <a href="#"
+                                   class="button primary-button mobile-download">
+                                    MOBILE GAME
                                 </a>
 
                             </div>
@@ -308,9 +422,9 @@
         </section>
 
 
-        <!-- =========================================
+        <!-- =====================================
              CODE & TOOLS
-        ========================================== -->
+        ====================================== -->
 
         <section id="tools" class="section section-dark">
 
@@ -359,10 +473,15 @@
                         <div class="tool-features">
 
                             <span>Vehicle Systems</span>
+
                             <span>Race Management</span>
+
                             <span>AI</span>
+
                             <span>Garage Systems</span>
+
                             <span>Vehicle Database</span>
+
                             <span>Performance Systems</span>
 
                         </div>
@@ -381,9 +500,9 @@
         </section>
 
 
-        <!-- =========================================
+        <!-- =====================================
              DEVELOPER LOG
-        ========================================== -->
+        ====================================== -->
 
         <section id="devlog" class="section">
 
@@ -441,9 +560,9 @@
         </section>
 
 
-        <!-- =========================================
+        <!-- =====================================
              ABOUT
-        ========================================== -->
+        ====================================== -->
 
         <section id="about" class="section section-dark">
 
@@ -532,92 +651,62 @@
 
 
     <!-- =========================================
-         BINARY FLASH SCRIPT
+         MOBILE NAVIGATION SCRIPT
     ========================================== -->
 
     <script>
 
-        const binaryFlash =
-            document.getElementById("binary-flash");
+        const mobileMenuButton =
+            document.getElementById("mobileMenuButton");
+
+        const mainNavigation =
+            document.getElementById("mainNavigation");
 
 
-        const binaryMessages = [
+        mobileMenuButton.addEventListener("click", function () {
 
-            "01000001 01001001 01001111 01000100 01000101 01010110",
+            const isOpen =
+                mainNavigation.classList.toggle("mobile-open");
 
-            "01000011 01001111 01000100 01000101",
-
-            "01010101 01001110 01001001 01010100 01011001",
-
-            "01000010 01010101 01001001 01001100 01000100",
-
-            "01000011 01010010 01000101 01000001 01010100 01000101",
-
-            "01010010 01000001 01000011 01001001 01001110 01000111"
-
-        ];
-
-
-        function generateBinary() {
-
-            let output = "";
-
-
-            for (let i = 0; i < 12; i++) {
-
-                const message =
-                    binaryMessages[
-                        Math.floor(
-                            Math.random() *
-                            binaryMessages.length
-                        )
-                    ];
-
-
-                output += message + "\n";
-
-            }
-
-
-            return output;
-
-        }
-
-
-        function triggerBinaryFlash() {
-
-            binaryFlash.textContent =
-                generateBinary();
-
-
-            binaryFlash.classList.remove("active");
-
-
-            /* Restart the CSS animation */
-
-            void binaryFlash.offsetWidth;
-
-
-            binaryFlash.classList.add("active");
-
-        }
-
-
-        /* First flash after 10 seconds */
-
-        setTimeout(() => {
-
-            triggerBinaryFlash();
-
-
-            /* Continue every 10 seconds */
-
-            setInterval(
-                triggerBinaryFlash,
-                10000
+            mobileMenuButton.setAttribute(
+                "aria-expanded",
+                isOpen
             );
 
-        }, 10000);
+            mobileMenuButton.innerHTML =
+                isOpen ? "✕" : "☰";
+
+        });
+
+
+        /*
+         * Close the mobile menu when a navigation
+         * link is selected.
+         */
+
+        const navigationLinks =
+            mainNavigation.querySelectorAll("a");
+
+
+        navigationLinks.forEach(function (link) {
+
+            link.addEventListener("click", function () {
+
+                mainNavigation.classList.remove(
+                    "mobile-open"
+                );
+
+                mobileMenuButton.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+                mobileMenuButton.innerHTML =
+                    "☰";
+
+            });
+
+        });
 
     </script>
 
