@@ -1,21 +1,676 @@
 /* =========================================
+   AIO DEV
+   MAIN STYLESHEET
+========================================= */
+
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background: #080808;
+    color: #eeeeee;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    line-height: 1.6;
+
+    overflow-x: hidden;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+button {
+    font-family: inherit;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.container {
+    width: min(1200px, 92%);
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.site-header {
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    background: rgba(8, 8, 8, 0.96);
+
+    border-bottom: 1px solid #252525;
+
+    backdrop-filter: blur(10px);
+}
+
+
+.nav-container {
+    min-height: 76px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo {
+    display: flex;
+
+    align-items: baseline;
+
+    gap: 7px;
+
+    letter-spacing: 3px;
+
+    font-weight: 900;
+}
+
+
+.logo-main {
+    font-size: 1.8rem;
+}
+
+
+.logo-sub {
+    font-size: 0.8rem;
+
+    color: #888;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.navigation {
+    display: flex;
+
+    align-items: center;
+
+    gap: 32px;
+}
+
+
+.navigation a {
+    position: relative;
+
+    color: #999;
+
+    font-size: 0.78rem;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1.5px;
+
+    transition:
+        color 0.2s ease;
+}
+
+
+.navigation a:hover {
+    color: #ffffff;
+}
+
+
+.navigation a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -8px;
+
+    width: 0;
+
+    height: 1px;
+
+    background: #ffffff;
+
+    transition:
+        width 0.2s ease;
+}
+
+
+.navigation a:hover::after {
+    width: 100%;
+}
+
+
+/* =========================================
+   MOBILE MENU BUTTON
+========================================= */
+
+.mobile-menu-button {
+    display: none;
+
+    border: 1px solid #333;
+
+    background: #111;
+
+    color: #ffffff;
+
+    width: 42px;
+
+    height: 42px;
+
+    cursor: pointer;
+
+    font-size: 1.25rem;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    position: relative;
+
+    min-height: 620px;
+
+    display: flex;
+
+    align-items: center;
+
+    border-bottom: 1px solid #222;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #1a1a1a 0%,
+            #0b0b0b 45%,
+            #050505 100%
+        );
+
+    overflow: hidden;
+}
+
+
+/* subtle technical lines */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    opacity: 0.12;
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,0.08) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0.08) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        60px 60px;
+
+    mask-image:
+        linear-gradient(
+            to bottom,
+            black,
+            transparent
+        );
+}
+
+
+.hero-content {
+    position: relative;
+
+    z-index: 1;
+
+    padding-top: 70px;
+
+    padding-bottom: 70px;
+}
+
+
+.hero-label {
+    margin-bottom: 15px;
+
+    color: #888;
+
+    font-size: 0.75rem;
+
+    font-weight: bold;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+}
+
+
+.hero h1 {
+    margin-bottom: 20px;
+
+    font-size:
+        clamp(4rem, 12vw, 9rem);
+
+    line-height: 0.9;
+
+    letter-spacing: -4px;
+
+    font-weight: 900;
+}
+
+
+.hero-description {
+    max-width: 620px;
+
+    margin-bottom: 35px;
+
+    color: #999;
+
+    font-size: 1.05rem;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.button {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 44px;
+
+    padding:
+        0 22px;
+
+    border: 1px solid #444;
+
+    font-size: 0.72rem;
+
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.button:hover {
+    transform: translateY(-2px);
+}
+
+
+.primary-button {
+    background: #eeeeee;
+
+    color: #080808;
+
+    border-color: #eeeeee;
+}
+
+
+.primary-button:hover {
+    background: #ffffff;
+
+    border-color: #ffffff;
+}
+
+
+.secondary-button {
+    background: transparent;
+
+    color: #dddddd;
+}
+
+
+.secondary-button:hover {
+    background: #eeeeee;
+
+    color: #080808;
+
+    border-color: #eeeeee;
+}
+
+
+/* =========================================
+   SECTIONS
+========================================= */
+
+.section {
+    padding:
+        110px 0;
+
+    border-bottom: 1px solid #222;
+}
+
+
+.section-dark {
+    background: #050505;
+}
+
+
+/* =========================================
+   SECTION HEADINGS
+========================================= */
+
+.section-heading {
+    margin-bottom: 55px;
+}
+
+
+.section-label {
+    margin-bottom: 10px;
+
+    color: #777;
+
+    font-size: 0.7rem;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+
+.section-heading h2 {
+    margin-bottom: 15px;
+
+    font-size:
+        clamp(2rem, 5vw, 3.5rem);
+
+    line-height: 1;
+
+    letter-spacing: -1px;
+}
+
+
+.section-heading > p:last-child {
+    max-width: 650px;
+
+    color: #888;
+}
+
+
+/* =========================================
+   GAMES GRID
+========================================= */
+
+.games-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 25px;
+}
+
+
+/* =========================================
+   GAME CARD
+========================================= */
+
+.game-card {
+    background: #0c0c0c;
+
+    border: 1px solid #292929;
+
+    overflow: hidden;
+
+    transition:
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.game-card:hover {
+    border-color: #555;
+
+    transform: translateY(-4px);
+}
+
+
+/* =========================================
+   GAME IMAGE PLACEHOLDER
+========================================= */
+
+.game-image {
+    min-height: 260px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #222,
+            #090909
+        );
+
+    border-bottom: 1px solid #292929;
+}
+
+
+.image-placeholder {
+    color: #555;
+
+    font-size: 0.75rem;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   GAME CONTENT
+========================================= */
+
+.game-content {
+    padding: 30px;
+}
+
+
+.game-meta {
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-bottom: 15px;
+}
+
+
+.game-status {
+    display: inline-block;
+
+    color: #777;
+
+    font-size: 0.65rem;
+
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+}
+
+
+.platform-badge {
+    display: inline-flex;
+
+    align-items: center;
+
+    min-height: 23px;
+
+    padding:
+        0 8px;
+
+    border: 1px solid #444;
+
+    color: #aaa;
+
+    font-size: 0.6rem;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+
+.platform-badge.pc {
+    border-color: #555;
+}
+
+
+.platform-badge.mobile {
+    border-color: #555;
+}
+
+
+.game-content h3 {
+    margin-bottom: 8px;
+
+    font-size: 1.7rem;
+
+    line-height: 1.1;
+}
+
+
+/* =========================================
    GAME TAGLINE
 ========================================= */
 
 .game-tagline {
+    margin-bottom: 15px;
 
-    color: #dddddd !important;
+    color: #ddd;
 
     font-size: 0.85rem;
 
     font-weight: bold;
 
     letter-spacing: 1px;
+}
 
-    margin-top: -8px;
 
-    margin-bottom: 15px !important;
+.game-content > p:not(.game-tagline) {
+    margin-bottom: 25px;
 
+    color: #888;
+
+    font-size: 0.92rem;
+}
+
+
+/* =========================================
+   GAME BUTTONS
+========================================= */
+
+.game-buttons {
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+
+.mobile-platform-message {
+    display: none;
+
+    color: #777;
+
+    font-size: 0.65rem;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   HIDDEN DIMENSIONS
+========================================= */
+
+.hidden-dimensions-card {
+    border-color: #333;
 }
 
 
@@ -24,10 +679,10 @@
 ========================================= */
 
 .tool-card {
-
     display: grid;
 
-    grid-template-columns: 180px 1fr;
+    grid-template-columns:
+        180px 1fr;
 
     gap: 40px;
 
@@ -36,12 +691,10 @@
     background: #0a0a0a;
 
     border: 1px solid #292929;
-
 }
 
 
 .tool-icon {
-
     display: flex;
 
     align-items: center;
@@ -64,32 +717,26 @@
     font-weight: 900;
 
     letter-spacing: 3px;
-
 }
 
 
 .tool-content h3 {
-
-    font-size: 2rem;
-
     margin-bottom: 15px;
 
+    font-size: 2rem;
 }
 
 
 .tool-content > p {
-
     max-width: 800px;
-
-    color: #999;
 
     margin-bottom: 25px;
 
+    color: #999;
 }
 
 
 .tool-features {
-
     display: flex;
 
     flex-wrap: wrap;
@@ -97,13 +744,12 @@
     gap: 10px;
 
     margin-bottom: 30px;
-
 }
 
 
 .tool-features span {
-
-    padding: 7px 12px;
+    padding:
+        7px 12px;
 
     border: 1px solid #333;
 
@@ -114,16 +760,110 @@
     text-transform: uppercase;
 
     letter-spacing: 1px;
-
 }
 
 
 /* =========================================
-   ABOUT QUOTE
+   DEVELOPER LOG
 ========================================= */
 
-.about-quote {
+.devlog-entry {
+    display: grid;
 
+    grid-template-columns:
+        180px 1fr;
+
+    gap: 40px;
+
+    padding: 35px;
+
+    border: 1px solid #292929;
+
+    background: #0c0c0c;
+}
+
+
+.devlog-date {
+    color: #777;
+
+    font-size: 0.7rem;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+.devlog-content h3 {
+    margin-bottom: 12px;
+
+    font-size: 1.5rem;
+}
+
+
+.devlog-content p {
+    max-width: 800px;
+
+    margin-bottom: 20px;
+
+    color: #888;
+}
+
+
+.text-link {
+    color: #ddd;
+
+    font-size: 0.72rem;
+
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+
+    transition:
+        color 0.2s ease;
+}
+
+
+.text-link:hover {
+    color: #ffffff;
+}
+
+
+/* =========================================
+   ABOUT
+========================================= */
+
+.about-section {
+    display: grid;
+
+    grid-template-columns:
+        minmax(220px, 0.6fr)
+        minmax(0, 1.4fr);
+
+    gap: 70px;
+}
+
+
+.about-content {
+    max-width: 800px;
+}
+
+
+.about-content p {
+    margin-bottom: 22px;
+
+    color: #999;
+}
+
+
+.about-content strong {
+    color: #eeeeee;
+
+    font-size: 1.2rem;
+}
+
+
+.about-quote {
     padding-left: 20px;
 
     border-left: 2px solid #555;
@@ -131,204 +871,301 @@
     color: #ddd !important;
 
     font-style: italic;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.site-footer {
+    padding:
+        50px 0;
+
+    background: #030303;
+}
+
+
+.footer-content {
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+.footer-logo {
+    font-size: 1.2rem;
+
+    font-weight: 900;
+
+    letter-spacing: 3px;
+}
+
+
+.footer-content p {
+    color: #666;
+
+    font-size: 0.75rem;
+}
+
+
+.copyright {
+    text-align: right;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .navigation {
+        gap: 18px;
+    }
+
+
+    .games-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .tool-card {
+        grid-template-columns: 130px 1fr;
+
+        gap: 25px;
+
+        padding: 30px;
+    }
+
+
+    .about-section {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
 
 }
 
 
 /* =========================================
-   MOBILE TOOL CARD
+   MOBILE
 ========================================= */
 
 @media (max-width: 700px) {
 
-    .tool-card {
+    /* Header */
 
+    .nav-container {
+        min-height: 65px;
+    }
+
+
+    .mobile-menu-button {
+        display: block;
+    }
+
+
+    .navigation {
+        position: absolute;
+
+        top: 65px;
+
+        left: 0;
+
+        right: 0;
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 0;
+
+        background: #080808;
+
+        border-bottom: 1px solid #292929;
+    }
+
+
+    .navigation.mobile-open {
+        display: flex;
+    }
+
+
+    .navigation a {
+        padding:
+            18px 4%;
+
+        border-bottom: 1px solid #202020;
+
+        font-size: 0.75rem;
+    }
+
+
+    .navigation a::after {
+        display: none;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        min-height: 520px;
+    }
+
+
+    .hero-content {
+        padding:
+            60px 0;
+    }
+
+
+    .hero h1 {
+        font-size:
+            clamp(3.5rem, 18vw, 6rem);
+
+        letter-spacing: -3px;
+    }
+
+
+    .hero-description {
+        font-size: 0.95rem;
+    }
+
+
+    /* Sections */
+
+    .section {
+        padding:
+            75px 0;
+    }
+
+
+    .section-heading {
+        margin-bottom: 40px;
+    }
+
+
+    /* Game cards */
+
+    .game-image {
+        min-height: 210px;
+    }
+
+
+    .game-content {
+        padding: 25px;
+    }
+
+
+    .game-content h3 {
+        font-size: 1.5rem;
+    }
+
+
+    .game-buttons {
+        align-items: stretch;
+
+        flex-direction: column;
+    }
+
+
+    .game-buttons .button {
+        width: 100%;
+    }
+
+
+    /* Tool */
+
+    .tool-card {
         grid-template-columns: 1fr;
 
         gap: 25px;
 
         padding: 25px;
-
     }
 
 
     .tool-icon {
-
         min-height: 120px;
-
     }
 
 
     .tool-content h3 {
-
         font-size: 1.6rem;
+    }
 
+
+    /* Dev log */
+
+    .devlog-entry {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+        padding: 25px;
+    }
+
+
+    /* About */
+
+    .about-section {
+        gap: 25px;
+    }
+
+
+    /* Footer */
+
+    .footer-content {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .copyright {
+        text-align: left;
     }
 
 }
 
 
 /* =========================================
-   AIO DEV BINARY FLASH
+   SMALL PHONES
 ========================================= */
 
-/*
-   This is intentionally subtle.
+@media (max-width: 420px) {
 
-   The binary is invisible most of the time
-   and briefly appears every 10 seconds.
-*/
-
-#binary-flash {
-
-    position: fixed;
-
-    inset: 0;
-
-    z-index: 9999;
-
-    pointer-events: none;
-
-    opacity: 0;
-
-    overflow: hidden;
-
-    color: rgba(255, 255, 255, 0.18);
-
-    font-family:
-        "Courier New",
-        Courier,
-        monospace;
-
-    font-size: 11px;
-
-    letter-spacing: 2px;
-
-    line-height: 1.8;
-
-    padding: 20px;
-
-    white-space: pre-wrap;
-
-    text-shadow:
-        0 0 8px rgba(255, 255, 255, 0.15);
-
-}
-
-
-/* =========================================
-   BINARY FLASH ANIMATION
-========================================= */
-
-#binary-flash.active {
-
-    animation:
-        binaryFlash 1.2s ease-in-out forwards;
-
-}
-
-
-@keyframes binaryFlash {
-
-    0% {
-
-        opacity: 0;
-
+    .container {
+        width: 90%;
     }
 
 
-    15% {
-
-        opacity: 0.75;
-
+    .hero h1 {
+        font-size: 3.5rem;
     }
 
 
-    25% {
+    .hero-label {
+        font-size: 0.65rem;
 
-        opacity: 0.25;
-
+        letter-spacing: 2px;
     }
 
 
-    40% {
-
-        opacity: 0.65;
-
+    .section-heading h2 {
+        font-size: 2rem;
     }
 
 
-    55% {
-
-        opacity: 0.15;
-
+    .game-image {
+        min-height: 180px;
     }
-
-
-    70% {
-
-        opacity: 0.5;
-
-    }
-
-
-    100% {
-
-        opacity: 0;
-
-    }
-
-}
-
-
-/* =========================================
-   OPTIONAL BINARY EDGE EFFECT
-========================================= */
-
-/*
-   Very subtle binary texture around the
-   outside edge of the screen.
-*/
-
-#binary-flash::before {
-
-    content:
-        "01001001 01001111 01000100 01000101 01010110";
-
-    position: absolute;
-
-    top: 8px;
-
-    left: 50%;
-
-    transform: translateX(-50%);
-
-    font-size: 9px;
-
-    letter-spacing: 3px;
-
-    opacity: 0.4;
-
-}
-
-
-#binary-flash::after {
-
-    content:
-        "01000011 01001111 01000100 01000101";
-
-    position: absolute;
-
-    bottom: 8px;
-
-    left: 50%;
-
-    transform: translateX(-50%);
-
-    font-size: 9px;
-
-    letter-spacing: 3px;
-
-    opacity: 0.4;
 
 }
