@@ -1169,3 +1169,389 @@ button {
     }
 
 }
+/* =========================================
+   GAME PAGE
+   RUZTY NUTZ RACING / MASTER TEMPLATE
+========================================= */
+
+
+/* =========================================
+   GAME PAGE HERO
+========================================= */
+
+.game-page-hero {
+    position: relative;
+
+    min-height: 560px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    padding:
+        100px 0 80px;
+
+    border-bottom: 1px solid #292929;
+
+    background:
+        radial-gradient(
+            circle at 70% 40%,
+            #252525 0%,
+            #111111 35%,
+            #060606 75%
+        );
+
+    overflow: hidden;
+}
+
+
+/* Technical background */
+
+.game-page-hero::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    opacity: 0.12;
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,0.08) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0.08) 1px,
+            transparent 1px
+        );
+
+    background-size: 50px 50px;
+}
+
+
+/* Large diagonal technical mark */
+
+.game-page-hero::after {
+    content: "AIO";
+
+    position: absolute;
+
+    right: -40px;
+
+    bottom: -80px;
+
+    color: rgba(255,255,255,0.025);
+
+    font-size:
+        clamp(12rem, 30vw, 28rem);
+
+    font-weight: 900;
+
+    line-height: 1;
+
+    letter-spacing: -15px;
+
+    pointer-events: none;
+}
+
+
+.game-page-hero .container {
+    position: relative;
+
+    z-index: 1;
+}
+
+
+.game-page-hero h1 {
+    max-width: 1000px;
+
+    margin-bottom: 15px;
+
+    font-size:
+        clamp(3.2rem, 8vw, 7rem);
+
+    line-height: 0.95;
+
+    letter-spacing: -3px;
+
+    font-weight: 900;
+}
+
+
+.game-page-tagline {
+    margin-bottom: 25px;
+
+    color: #cccccc;
+
+    font-size:
+        clamp(1rem, 2vw, 1.3rem);
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+
+.game-page-platform {
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+}
+
+
+/* =========================================
+   GAME PAGE CONTENT
+========================================= */
+
+.game-page-content {
+    display: grid;
+
+    grid-template-columns:
+        minmax(250px, 0.75fr)
+        minmax(0, 1.25fr);
+
+    gap: 80px;
+
+    align-items: start;
+}
+
+
+.game-page-content h2 {
+    font-size:
+        clamp(2rem, 4vw, 3rem);
+
+    line-height: 1;
+
+    letter-spacing: -1px;
+}
+
+
+.game-page-description {
+    max-width: 800px;
+}
+
+
+.game-page-description p {
+    margin-bottom: 25px;
+
+    color: #999;
+
+    font-size: 1rem;
+}
+
+
+.game-page-description p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   FEATURE GRID
+========================================= */
+
+.feature-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+
+.feature-card {
+    position: relative;
+
+    min-height: 240px;
+
+    padding: 30px;
+
+    background: #0b0b0b;
+
+    border: 1px solid #292929;
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+.feature-card:hover {
+    transform: translateY(-4px);
+
+    border-color: #555;
+}
+
+
+.feature-number {
+    display: block;
+
+    margin-bottom: 40px;
+
+    color: #555;
+
+    font-family:
+        "Courier New",
+        Courier,
+        monospace;
+
+    font-size: 0.7rem;
+
+    letter-spacing: 2px;
+}
+
+
+.feature-card h3 {
+    margin-bottom: 12px;
+
+    font-size: 1.3rem;
+
+    letter-spacing: 1px;
+}
+
+
+.feature-card p {
+    color: #888;
+
+    font-size: 0.9rem;
+}
+
+
+/* =========================================
+   GAME DOWNLOAD AREA
+========================================= */
+
+.game-download {
+    text-align: center;
+
+    padding-top: 30px;
+}
+
+
+.game-download h2 {
+    margin-bottom: 15px;
+
+    font-size:
+        clamp(2rem, 5vw, 4rem);
+
+    line-height: 1;
+}
+
+
+.game-download > p {
+    margin-bottom: 30px;
+
+    color: #888;
+}
+
+
+/* =========================================
+   GAME PAGE DIVIDERS
+========================================= */
+
+.game-page-content::before {
+    content: "";
+
+    display: none;
+}
+
+
+/* =========================================
+   GAME PAGE MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .game-page-hero {
+        min-height: 480px;
+
+        padding:
+            80px 0 60px;
+    }
+
+
+    .game-page-hero h1 {
+        font-size:
+            clamp(2.8rem, 14vw, 5rem);
+
+        letter-spacing: -2px;
+    }
+
+
+    .game-page-tagline {
+        font-size: 0.8rem;
+
+        letter-spacing: 2px;
+    }
+
+
+    .game-page-content {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .feature-card {
+        min-height: 200px;
+
+        padding: 25px;
+    }
+
+
+    .feature-number {
+        margin-bottom: 30px;
+    }
+
+
+    .game-download {
+        text-align: left;
+    }
+
+
+    .game-download .button {
+        width: 100%;
+    }
+
+}
+
+
+/* =========================================
+   GAME PAGE SMALL PHONES
+========================================= */
+
+@media (max-width: 420px) {
+
+    .game-page-hero {
+        min-height: 430px;
+
+        padding:
+            70px 0 50px;
+    }
+
+
+    .game-page-hero h1 {
+        font-size: 2.8rem;
+    }
+
+
+    .feature-card {
+        min-height: 180px;
+    }
+
+}
