@@ -69,21 +69,95 @@
 
             <div class="container hero-content">
 
-                <div class="aio-hero-logo">
-                    <img src="aio-dev-sign.png" alt="AIO DEV — All In One Development">
+                <div class="aio-hero-sign">
+                    <img
+                        src="assets/aio-dev-sign.png"
+                        alt="AIO DEV — All In One Development">
                 </div>
 
                 <p class="hero-description">
-
-                    Independent game development,
-                    programming, tools, experiments,
-                    and everything in between.
-
+                    Independent game development, programming,
+                    tools, experiments, and everything in between.
                 </p>
 
-                <a href="#games" class="button primary-button">
-                    EXPLORE GAMES
+                <a href="#games" class="aio-button primary-button">
+                    <span>EXPLORE GAMES</span>
+                    <span class="button-arrow">→</span>
                 </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             AIO DEV OVERVIEW NAVIGATION
+             Dynamic recreation of the overview artwork
+        ====================================== -->
+
+        <section class="overview-panels" aria-label="AIO DEV overview">
+
+            <div class="container overview-grid">
+
+                <article class="overview-panel">
+                    <div class="panel-corner panel-corner-tl"></div>
+                    <div class="panel-corner panel-corner-br"></div>
+                    <div class="panel-icon">⌘</div>
+                    <h2>GAMES</h2>
+                    <p>
+                        Original games in development.
+                        From racing to survival and everything in between.
+                    </p>
+                    <a href="#games" class="aio-button panel-button">
+                        <span>VIEW GAMES</span>
+                        <span class="button-arrow">→</span>
+                    </a>
+                </article>
+
+                <article class="overview-panel">
+                    <div class="panel-corner panel-corner-tl"></div>
+                    <div class="panel-corner panel-corner-br"></div>
+                    <div class="panel-icon">⚙</div>
+                    <h2>CODE &amp; TOOLS</h2>
+                    <p>
+                        Frameworks, systems, tools, and reusable code
+                        for Unity and beyond.
+                    </p>
+                    <a href="#tools" class="aio-button panel-button">
+                        <span>EXPLORE TOOLS</span>
+                        <span class="button-arrow">→</span>
+                    </a>
+                </article>
+
+                <article class="overview-panel">
+                    <div class="panel-corner panel-corner-tl"></div>
+                    <div class="panel-corner panel-corner-br"></div>
+                    <div class="panel-icon">▤</div>
+                    <h2>DEV LOG</h2>
+                    <p>
+                        Development updates, behind the scenes,
+                        progress, problems, and solutions.
+                    </p>
+                    <a href="#devlog" class="aio-button panel-button">
+                        <span>READ DEV LOG</span>
+                        <span class="button-arrow">→</span>
+                    </a>
+                </article>
+
+                <article class="overview-panel">
+                    <div class="panel-corner panel-corner-tl"></div>
+                    <div class="panel-corner panel-corner-br"></div>
+                    <div class="panel-icon">◉</div>
+                    <h2>ABOUT</h2>
+                    <p>
+                        About AIO DEV, the mission, and the solo developer
+                        behind it all.
+                    </p>
+                    <a href="#about" class="aio-button panel-button">
+                        <span>LEARN MORE</span>
+                        <span class="button-arrow">→</span>
+                    </a>
+                </article>
 
             </div>
 
@@ -607,6 +681,14 @@
 
             </div>
 
+        </section>
+
+        <section class="aio-status-strip" aria-label="AIO DEV status">
+            <div class="container">
+                <span>// BUILD. BREAK. LEARN. REPEAT.</span>
+                <span class="status-light">● ONLINE</span>
+                <span>AIO DEV // ALL IN ONE DEVELOPMENT</span>
+            </div>
         </section>
 
     </main>
