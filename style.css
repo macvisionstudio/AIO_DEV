@@ -1556,38 +1556,460 @@ button {
 
 }
 
-/* AIO DEV MASTER HERO */
-.hero { overflow:hidden; }
-.hero::after { display:none !important; }
-.hero-content { position:relative; z-index:2; max-width:1000px; margin:0 auto; text-align:center; padding-top:70px; padding-bottom:78px; }
-.aio-hero-logo { width:min(920px,94vw); margin:0 auto 26px; position:relative; }
-.aio-hero-logo img { display:block; width:100%; height:auto; object-fit:contain; filter:saturate(.86) contrast(1.08) drop-shadow(0 18px 28px rgba(0,0,0,.65)); }
-.aio-hero-logo::after { content:""; position:absolute; left:13%; right:13%; bottom:-9px; height:2px; background:linear-gradient(90deg,transparent,rgba(99,217,209,.6),transparent); }
-.hero-label,.hero h1 { display:none !important; }
-.hero-description { max-width:850px; margin:0 auto 28px; padding-left:0; border-left:0; text-align:center; color:#aaa9a1; }
-.hero-actions { justify-content:center; }
+/* =========================================================
+   AIO DEV DYNAMIC OVERVIEW THEME
+   Recreates the supplied overview image with real HTML/CSS.
+   The artwork is used only for the AIO DEV hero sign.
+========================================================= */
 
-/* Master content panel detailing */
-.game-card,.tool-card,.devlog-entry,.feature-card { position:relative; overflow:hidden; }
-.game-card::before,.tool-card::before,.devlog-entry::before,.feature-card::before { content:""; position:absolute; inset:7px; border:1px solid rgba(99,217,209,.08); pointer-events:none; }
+:root {
+    --aio-bg: #070808;
+    --aio-panel: #111414;
+    --aio-panel-2: #181b1a;
+    --aio-line: #3d4542;
+    --aio-rust: #8f4b2e;
+    --aio-rust-dark: #4b291e;
+    --aio-cyan: #4cc8c5;
+    --aio-cyan-dark: #145c5b;
+    --aio-cream: #d9d2c2;
+    --aio-muted: #99988f;
+}
 
-/* Responsive mobile layout */
-@media (max-width:700px) {
- .hero { min-height:auto; }
- .hero-content { width:100%; padding:34px 14px 52px; }
- .aio-hero-logo { width:min(96vw,560px); margin-bottom:22px; }
- .aio-hero-logo img { filter:saturate(.82) contrast(1.05) drop-shadow(0 10px 18px rgba(0,0,0,.6)); }
- .aio-hero-logo::after { left:9%; right:9%; bottom:-7px; }
- .hero-description { width:100%; font-size:.92rem; line-height:1.65; margin-bottom:24px; }
- .hero-actions { width:100%; }
- .hero-actions .button { width:min(100%,360px); min-height:50px; justify-content:center; }
- .games-grid,.tools-grid,.devlog-grid,.features-grid { grid-template-columns:1fr !important; }
- .game-card,.tool-card,.devlog-entry,.feature-card { width:100%; }
- .section { padding-left:14px; padding-right:14px; }
- .section-heading { text-align:center; }
+html {
+    scroll-behavior: smooth;
 }
-@media (max-width:420px) {
- .hero-content { padding-left:9px; padding-right:9px; }
- .aio-hero-logo { width:98vw; margin-left:-1vw; }
- .hero-description { font-size:.88rem; }
+
+body {
+    background:
+        radial-gradient(circle at 50% 10%, rgba(76,200,197,.055), transparent 28%),
+        linear-gradient(180deg, #090a0a, #050606 72%, #080909);
+    color: var(--aio-cream);
+    font-family: "Courier New", Courier, monospace;
 }
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 50;
+    opacity: .055;
+    background:
+        repeating-linear-gradient(
+            0deg,
+            transparent 0,
+            transparent 3px,
+            rgba(255,255,255,.08) 4px
+        );
+    mix-blend-mode: screen;
+}
+
+/* Header */
+.site-header {
+    background:
+        linear-gradient(180deg, #171a1a, #0b0d0d);
+    border-bottom: 1px solid #39413f;
+    box-shadow: 0 8px 28px rgba(0,0,0,.65);
+}
+
+.logo {
+    position: relative;
+    padding: 10px 16px;
+    border: 1px solid #454b49;
+    background: linear-gradient(135deg, #242827, #0c0e0e);
+    box-shadow:
+        inset 0 1px rgba(255,255,255,.08),
+        0 0 0 1px #080909;
+}
+
+.logo-main {
+    color: var(--aio-cream);
+}
+
+.logo-sub {
+    color: var(--aio-cyan);
+}
+
+.navigation a {
+    color: #c7c1b4;
+    letter-spacing: 1px;
+}
+
+.navigation a:hover {
+    color: var(--aio-cyan);
+}
+
+.navigation a::after {
+    background: var(--aio-cyan);
+    box-shadow: 0 0 10px rgba(76,200,197,.55);
+}
+
+/* Hero */
+.hero {
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 50% 38%, rgba(76,200,197,.07), transparent 25%),
+        radial-gradient(circle at 18% 70%, rgba(143,75,46,.08), transparent 28%),
+        linear-gradient(135deg, #151818, #060707 70%);
+    border-bottom: 1px solid #39413f;
+}
+
+.hero::before {
+    opacity: .12;
+    background-image:
+        linear-gradient(rgba(76,200,197,.14) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(76,200,197,.14) 1px, transparent 1px);
+    background-size: 60px 60px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding-top: 55px;
+    padding-bottom: 60px;
+    text-align: center;
+}
+
+.hero-label,
+.hero h1 {
+    display: none !important;
+}
+
+.aio-hero-sign {
+    width: min(880px, 92vw);
+    margin: 0 auto 22px;
+    position: relative;
+}
+
+.aio-hero-sign img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid #4c514d;
+    box-shadow:
+        0 18px 40px rgba(0,0,0,.65),
+        0 0 0 1px #090a0a,
+        0 0 35px rgba(76,200,197,.045);
+    filter: saturate(.9) contrast(1.06);
+}
+
+.hero-description {
+    max-width: 900px;
+    margin: 0 auto 25px;
+    color: #c3bdaf;
+    font-size: 1rem;
+    letter-spacing: .4px;
+}
+
+/* Real interactive metal buttons */
+.aio-button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    min-width: 220px;
+    min-height: 48px;
+    padding: 0 22px;
+    border: 1px solid #52605d;
+    background:
+        linear-gradient(180deg, #1e5557, #102b2c 52%, #0b191a);
+    color: #70d9d7;
+    text-decoration: none;
+    font-family: "Courier New", Courier, monospace;
+    font-size: .78rem;
+    font-weight: bold;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    box-shadow:
+        inset 0 1px rgba(255,255,255,.13),
+        inset 0 -3px rgba(0,0,0,.35),
+        0 5px 0 #050606,
+        0 8px 18px rgba(0,0,0,.28);
+    transition: transform .18s ease, border-color .18s ease, filter .18s ease;
+    clip-path: polygon(
+        4% 0, 96% 0, 100% 18%, 100% 82%,
+        96% 100%, 4% 100%, 0 82%, 0 18%
+    );
+}
+
+.aio-button:hover {
+    color: #a8ffff;
+    border-color: var(--aio-cyan);
+    filter: brightness(1.18);
+    transform: translateY(-2px);
+}
+
+.aio-button:active {
+    transform: translateY(2px);
+    box-shadow:
+        inset 0 1px rgba(255,255,255,.08),
+        0 2px 0 #050606;
+}
+
+.button-arrow {
+    font-size: 1.1rem;
+}
+
+/* Four-panel dynamic overview */
+.overview-panels {
+    position: relative;
+    padding: 22px 0 26px;
+    background:
+        linear-gradient(180deg, #0a0c0c, #070808);
+    border-bottom: 1px solid #3b4441;
+}
+
+.overview-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+
+.overview-panel {
+    position: relative;
+    min-height: 300px;
+    padding: 28px 24px 24px;
+    text-align: center;
+    overflow: hidden;
+    background:
+        linear-gradient(135deg, rgba(255,255,255,.035), transparent 30%),
+        linear-gradient(180deg, #1a1d1c, #0c0e0e);
+    border: 1px solid #3b4340;
+    box-shadow:
+        inset 0 1px rgba(255,255,255,.07),
+        0 8px 18px rgba(0,0,0,.35);
+}
+
+.overview-panel::before {
+    content: "";
+    position: absolute;
+    inset: 8px;
+    border: 1px solid rgba(76,200,197,.09);
+    pointer-events: none;
+}
+
+.overview-panel::after {
+    content: "";
+    position: absolute;
+    left: 20%;
+    right: 20%;
+    top: 70px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(76,200,197,.35), transparent);
+}
+
+.panel-corner {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #68706c;
+}
+
+.panel-corner-tl {
+    left: 11px;
+    top: 11px;
+}
+
+.panel-corner-br {
+    right: 11px;
+    bottom: 11px;
+}
+
+.panel-icon {
+    position: relative;
+    z-index: 1;
+    height: 76px;
+    padding-top: 8px;
+    color: var(--aio-cyan);
+    font-family: Arial, sans-serif;
+    font-size: 3.3rem;
+    line-height: 1;
+    text-shadow: 0 0 16px rgba(76,200,197,.25);
+}
+
+.overview-panel h2 {
+    position: relative;
+    z-index: 1;
+    margin: 12px 0 20px;
+    color: var(--aio-cream);
+    font-size: 1.35rem;
+    letter-spacing: 2px;
+}
+
+.overview-panel p {
+    position: relative;
+    z-index: 1;
+    min-height: 78px;
+    margin: 0 auto 20px;
+    max-width: 270px;
+    color: #bbb6aa;
+    font-size: .78rem;
+    line-height: 1.7;
+}
+
+.panel-button {
+    position: relative;
+    z-index: 2;
+    min-width: 190px;
+    min-height: 43px;
+    font-size: .68rem;
+    gap: 14px;
+}
+
+.overview-panel:hover {
+    border-color: var(--aio-rust);
+    box-shadow:
+        inset 0 1px rgba(255,255,255,.08),
+        0 10px 25px rgba(0,0,0,.45),
+        0 0 22px rgba(143,75,46,.08);
+}
+
+/* Existing sections inherit the industrial look */
+.section {
+    background: #0a0c0c;
+    border-bottom-color: #2e3533;
+}
+
+.section-dark {
+    background:
+        linear-gradient(135deg, rgba(143,75,46,.035), transparent 30%),
+        #070909;
+}
+
+.section-heading h2 {
+    color: var(--aio-cream);
+}
+
+.section-label {
+    color: var(--aio-rust);
+}
+
+.game-card,
+.tool-card,
+.devlog-entry {
+    background:
+        linear-gradient(135deg, rgba(255,255,255,.025), transparent 30%),
+        linear-gradient(180deg, #171a19, #0b0d0d);
+    border-color: #39413e;
+}
+
+.game-card:hover,
+.tool-card:hover {
+    border-color: var(--aio-cyan);
+}
+
+.game-tagline,
+.devlog-date {
+    color: var(--aio-rust);
+}
+
+.text-link {
+    color: var(--aio-cyan);
+}
+
+/* Status strip */
+.aio-status-strip {
+    border-top: 1px solid #39413e;
+    border-bottom: 1px solid #151918;
+    background: #090b0b;
+}
+
+.aio-status-strip .container {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    color: #4daead;
+    font-size: .68rem;
+    letter-spacing: 1.5px;
+}
+
+.status-light {
+    color: #6dd6c9;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+    .overview-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .hero {
+        min-height: auto;
+    }
+
+    .hero-content {
+        padding: 32px 12px 46px;
+    }
+
+    .aio-hero-sign {
+        width: 96vw;
+        margin-left: -2vw;
+        margin-bottom: 18px;
+    }
+
+    .hero-description {
+        font-size: .9rem;
+        line-height: 1.65;
+    }
+
+    .aio-button {
+        min-height: 50px;
+        width: min(100%, 350px);
+    }
+
+    .overview-panels {
+        padding: 12px 0 18px;
+    }
+
+    .overview-grid {
+        grid-template-columns: 1fr;
+        gap: 7px;
+    }
+
+    .overview-panel {
+        min-height: 255px;
+        padding: 25px 20px 22px;
+    }
+
+    .overview-panel p {
+        min-height: auto;
+        max-width: 330px;
+    }
+
+    .panel-button {
+        width: min(100%, 300px);
+    }
+
+    .aio-status-strip .container {
+        flex-direction: column;
+        justify-content: center;
+        padding: 13px 0;
+        text-align: center;
+        gap: 8px;
+    }
+}
+
+@media (max-width: 420px) {
+    .aio-hero-sign {
+        width: 100vw;
+        margin-left: -5vw;
+    }
+
+    .hero-description {
+        font-size: .84rem;
+    }
+
+    .overview-panel h2 {
+        font-size: 1.15rem;
+    }
+}
+
