@@ -1560,11 +1560,16 @@ button {
    Uses the user's trimmed assets/aiodev.png.
 ========================================================= */
 
+/* =========================================
+   SMALL HEADER LOGO
+========================================= */
+
 .aio-header-logo {
     display: block;
-    width: 125px;
-    max-width: 32vw;
+    width: 75px;
+    max-width: 20vw;
     line-height: 0;
+    flex-shrink: 0;
 }
 
 .aio-header-logo img {
@@ -1589,10 +1594,11 @@ button {
 }
 
 @media (max-width: 700px) {
-    .aio-header-logo {
-        width: 105px;
-        max-width: 35vw;
+      .aio-header-logo {
+        width: 60px;
+        max-width: 22vw;
     }
+
 
     .aio-hero-logo {
         width: min(520px, 88vw);
