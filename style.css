@@ -280,6 +280,9 @@ button {
     padding-top: 70px;
 
     padding-bottom: 70px;
+
+   
+    text-align: center;
 }
 
 
@@ -315,7 +318,8 @@ button {
 .hero-description {
     max-width: 620px;
 
-    margin-bottom: 35px;
+   margin: 0 auto 35px;
+
 
     color: #999;
 
@@ -376,7 +380,10 @@ button {
 
     border-color: #ffffff;
 }
-
+.hero .primary-button {
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .secondary-button {
     background: transparent;
