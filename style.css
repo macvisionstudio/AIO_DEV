@@ -1613,37 +1613,5 @@ button {
         padding: 45px 0;
     }
 
-   /* =========================================
-   HERO CONTENT CENTERING
-========================================= */
-
-.hero-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.aio-hero-logo {
-    width: min(620px, 82vw);
-    margin: 0 auto 28px;
-}
-
-.aio-hero-logo img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-.hero-description {
-    width: 100%;
-    max-width: 700px;
-    margin: 0 auto 28px;
-    text-align: center;
-}
-
-.hero .button {
-    margin-left: auto;
-    margin-right: auto;
-}
+   
 }
