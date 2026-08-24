@@ -216,7 +216,7 @@ button {
 .hero {
     position: relative;
 
-    min-height: 500px;
+    min-height: 620px;
 
     display: flex;
 
@@ -1555,10 +1555,55 @@ button {
     }
 
 }
+/* =========================================================
+   AIO DEV LOGO / HERO SIZE OVERRIDES
+   Uses the user's trimmed assets/aiodev.png.
+========================================================= */
 
-/* AIO DEV game artwork */
-.game-card .game-image { position:relative; overflow:hidden; }
-.game-card-image { width:100%; height:260px; object-fit:cover; object-position:center; filter:saturate(.92) contrast(1.04); transition:transform .35s ease, filter .35s ease; }
-.game-card:hover .game-card-image { transform:scale(1.025); filter:saturate(1) contrast(1.08); }
-.game-card .game-image::after { content:""; position:absolute; inset:0; pointer-events:none; background:linear-gradient(180deg,rgba(0,0,0,.02),rgba(0,0,0,.24)); }
-@media (max-width:700px){ .game-card-image{height:220px;} }
+.aio-header-logo {
+    display: block;
+    width: 125px;
+    max-width: 32vw;
+    line-height: 0;
+}
+
+.aio-header-logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.aio-hero-logo {
+    width: min(620px, 82vw);
+    margin: 0 auto 28px;
+}
+
+.aio-hero-logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.hero {
+    min-height: 500px;
+}
+
+@media (max-width: 700px) {
+    .aio-header-logo {
+        width: 105px;
+        max-width: 35vw;
+    }
+
+    .aio-hero-logo {
+        width: min(520px, 88vw);
+        margin-bottom: 24px;
+    }
+
+    .hero {
+        min-height: 430px;
+    }
+
+    .hero-content {
+        padding: 45px 0;
+    }
+}
