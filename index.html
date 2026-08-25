@@ -185,7 +185,596 @@
     </div>
 
 </section>
+Pasted text(6).txt
+Document
+here is what i have
 
+👍 Let's build them. We'll keep everything we already have and add the industrial panel treatment to the existing page. No changes to the hero, logo, or game-page template.
+
+ok
+
+Let's do it. Since your existing stylesheet already has the foundation, we'll add the panels rather than rebuild anything.
+
+Put this HTML where you want the four panels to appear, immediately after the Hero section:
+
+<section class="aio-panels">
+
+    <div class="container">
+
+        <div class="aio-panel-grid">
+
+            <!-- GAMES -->
+            <a href="#games" class="aio-panel">
+
+                <span class="aio-panel-number">01 // PROJECTS</span>
+
+                <h2>GAMES</h2>
+
+                <div class="aio-panel-line"></div>
+
+                <p>
+                    Explore the games currently being developed
+                    by AIO DEV.
+                </p>
+
+                <span class="aio-panel-button">
+                    ENTER →
+                </span>
+
+            </a>
+
+
+            <!-- CODE & TOOLS -->
+            <a href="#tools" class="aio-panel">
+
+                <span class="aio-panel-number">02 // DEVELOPMENT</span>
+
+                <h2>CODE &amp; TOOLS</h2>
+
+                <div class="aio-panel-line"></div>
+
+                <p>
+                    Frameworks, tools, experiments and technology
+                    built during development.
+                </p>
+
+                <span class="aio-panel-button">
+                    EXPLORE →
+                </span>
+
+            </a>
+
+
+            <!-- DEV LOG -->
+            <a href="#devlog" class="aio-panel">
+
+                <span class="aio-panel-number">03 // TRANSMISSIONS</span>
+
+                <h2>DEV LOG</h2>
+
+                <div class="aio-panel-line"></div>
+
+                <p>
+                    Follow the development process, experiments,
+                    problems and breakthroughs.
+                </p>
+
+                <span class="aio-panel-button">
+                    READ LOG →
+                </span>
+
+            </a>
+
+
+            <!-- ABOUT -->
+            <a href="#about" class="aio-panel">
+
+                <span class="aio-panel-number">04 // SYSTEM</span>
+
+                <h2>ABOUT AIO DEV</h2>
+
+                <div class="aio-panel-line"></div>
+
+                <p>
+                    All In One Development. One developer,
+                    building games, tools and technology.
+                </p>
+
+                <span class="aio-panel-button">
+                    ABOUT →
+                </span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+Then add this at the very bottom of your existing style.css:
+
+/* =========================================
+   AIO DEV INDUSTRIAL PANELS
+========================================= */
+
+.aio-panels {
+    position: relative;
+
+    padding: 90px 0;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            #151515 0%,
+            #090909 55%,
+            #050505 100%
+        );
+
+    border-bottom: 1px solid #222;
+
+    overflow: hidden;
+}
+
+
+/* Technical grid */
+
+.aio-panels::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    opacity: 0.08;
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,0.08) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0.08) 1px,
+            transparent 1px
+        );
+
+    background-size: 50px 50px;
+}
+
+
+/* Panel grid */
+
+.aio-panel-grid {
+    position: relative;
+
+    z-index: 1;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 22px;
+}
+
+
+/* Individual panel */
+
+.aio-panel {
+    position: relative;
+
+    min-height: 280px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    padding: 32px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #151515 0%,
+            #0b0b0b 55%,
+            #080808 100%
+        );
+
+    border: 1px solid #303030;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease;
+}
+
+
+/* Industrial corner detail */
+
+.aio-panel::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    right: 0;
+
+    width: 80px;
+
+    height: 80px;
+
+    border-left: 1px solid #292929;
+
+    border-bottom: 1px solid #292929;
+
+    opacity: 0.5;
+}
+
+
+/* Subtle worn texture */
+
+.aio-panel::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    opacity: 0.08;
+
+    background:
+        repeating-linear-gradient(
+            115deg,
+            transparent 0px,
+            transparent 8px,
+            rgba(255,255,255,0.06) 9px,
+            transparent 10px
+        );
+}
+
+
+/* Hover */
+
+.aio-panel:hover {
+    transform: translateY(-4px);
+
+    border-color: #555;
+
+    background:
+        linear-gradient(
+            145deg,
+            #191919 0%,
+            #0d0d0d 55%,
+            #090909 100%
+        );
+}
+
+
+/* Panel number */
+
+.aio-panel-number {
+    position: relative;
+
+    z-index: 2;
+
+    margin-bottom: 45px;
+
+    color: #666;
+
+    font-family:
+        "Courier New",
+        Courier,
+        monospace;
+
+    font-size: 0.65rem;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+/* Panel heading */
+
+.aio-panel h2 {
+    position: relative;
+
+    z-index: 2;
+
+    margin-bottom: 15px;
+
+    color: #eeeeee;
+
+    font-size:
+        clamp(1.8rem, 4vw, 3rem);
+
+    line-height: 1;
+
+    letter-spacing: -1px;
+
+    font-weight: 900;
+}
+
+
+/* Technical divider */
+
+.aio-panel-line {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    height: 1px;
+
+    margin-bottom: 20px;
+
+    background:
+        linear-gradient(
+            to right,
+            #555,
+            #292929,
+            transparent
+        );
+}
+
+
+/* Description */
+
+.aio-panel p {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 520px;
+
+    margin-bottom: 30px;
+
+    color: #888;
+
+    font-size: 0.9rem;
+}
+
+
+/* Panel button */
+
+.aio-panel-button {
+    position: relative;
+
+    z-index: 2;
+
+    margin-top: auto;
+
+    padding: 9px 14px;
+
+    border: 1px solid #444;
+
+    color: #ccc;
+
+    font-size: 0.65rem;
+
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.aio-panel:hover .aio-panel-button {
+    background: #eeeeee;
+
+    color: #080808;
+
+    border-color: #eeeeee;
+}
+
+
+/* =========================================
+   PANEL MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .aio-panels {
+        padding: 60px 0;
+    }
+
+
+    .aio-panel-grid {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+
+    .aio-panel {
+        min-height: 250px;
+
+        padding: 25px;
+    }
+
+
+    .aio-panel-number {
+        margin-bottom: 35px;
+    }
+
+}
+What this gives you
+
+The panels will sit directly under the hero and feel like part of the same industrial environment, rather than looking like four generic website cards.
+
+And because we're using:
+
+.aio-panel::before
+.aio-panel::after
+
+we get those subtle technical/worn details without needing another image.
+
+Your existing sections can remain underneath them:
+
+HERO
+  ↓
+┌───────────────┬───────────────┐
+│     GAMES     │ CODE & TOOLS  │
+├───────────────┼───────────────┤
+│    DEV LOG    │  ABOUT AIO DEV│
+└───────────────┴───────────────┘
+  ↓
+EXISTING GAMES SECTION
+  ↓
+EXISTING CODE & TOOLS
+  ↓
+EXISTING DEV LOG
+  ↓
+EXISTING ABOUT
+
+One thing before you paste it: these panels are currently links to your existing sections (#games, #tools, #devlog, #about). So we aren't breaking the navigation you've already built.
+
+ok now where are my panels its just text
+
+Ah — I see the problem now. The panels aren't actually being styled because the HTML you currently have is still the original homepage structure. The file search shows your current index.html goes directly from the Hero into the existing Games section.
+
+So when you pasted my panel HTML, it looks like plain text because the panel CSS isn't in the version of style.css the browser is loading, or the HTML was pasted outside the proper <section> structure.
+
+Let's not guess or replace anything.
+
+Do this first
+
+Find this in your index.html:
+
+        </section>
+
+
+        <!-- =====================================
+             GAMES
+        ====================================== -->
+
+        <section id="games" class="section">
+
+It occurs immediately after your Hero.
+
+Put the panels between those two sections.
+
+So it becomes:
+
+        </section>
+
+
+        <!-- =====================================
+             AIO DEV PANELS
+        ====================================== -->
+
+        <section class="aio-panels">
+
+            <div class="container">
+
+                <div class="aio-panel-grid">
+
+                    <a href="#games" class="aio-panel">
+
+                        <span class="aio-panel-number">
+                            01 // PROJECTS
+                        </span>
+
+                        <h2>GAMES</h2>
+
+                        <div class="aio-panel-line"></div>
+
+                        <p>
+                            Explore the games currently being
+                            developed by AIO DEV.
+                        </p>
+
+                        <span class="aio-panel-button">
+                            ENTER →
+                        </span>
+
+                    </a>
+
+
+                    <a href="#tools" class="aio-panel">
+
+                        <span class="aio-panel-number">
+                            02 // DEVELOPMENT
+                        </span>
+
+                        <h2>CODE &amp; TOOLS</h2>
+
+                        <div class="aio-panel-line"></div>
+
+                        <p>
+                            Frameworks, tools, experiments and
+                            technology built during development.
+                        </p>
+
+                        <span class="aio-panel-button">
+                            EXPLORE →
+                        </span>
+
+                    </a>
+
+
+                    <a href="#devlog" class="aio-panel">
+
+                        <span class="aio-panel-number">
+                            03 // TRANSMISSIONS
+                        </span>
+
+                        <h2>DEV LOG</h2>
+
+                        <div class="aio-panel-line"></div>
+
+                        <p>
+                            Follow the development process,
+                            experiments and progress behind AIO DEV.
+                        </p>
+
+                        <span class="aio-panel-button">
+                            READ LOG →
+                        </span>
+
+                    </a>
+
+
+                    <a href="#about" class="aio-panel">
+
+                        <span class="aio-panel-number">
+                            04 // SYSTEM
+                        </span>
+
+                        <h2>ABOUT AIO DEV</h2>
+
+                        <div class="aio-panel-line"></div>
+
+                        <p>
+                            All In One Development. One developer
+                            building games, tools and technology.
+                        </p>
+
+                        <span class="aio-panel-button">
+                            ABOUT →
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
         <!-- =====================================
              GAMES
         ====================================== -->
