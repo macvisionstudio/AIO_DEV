@@ -2,624 +2,613 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="description"
+        content="AIO DEV - All In One Development. Independent games, code, tools, and development projects.">
 
     <title>AIO DEV | All In One Development</title>
 
     <link rel="stylesheet" href="style.css">
-
 </head>
-
 
 <body>
 
-
-    <!-- =====================================
-         HEADER
-    ====================================== -->
+    <!-- =========================================
+         HEADER / NAVIGATION
+    ========================================== -->
 
     <header class="site-header">
 
         <div class="container nav-container">
 
-            <a
-                href="index.html"
-                class="aio-header-logo"
-                aria-label="AIO DEV Home"
-            >
-
-                <img
-                    src="assets/aiodev.png"
-                    alt="AIO DEV"
-                >
-
+            <a href="index.html" class="aio-header-logo" aria-label="AIO DEV Home">
+                <img src="assets/aiodev.png" alt="AIO DEV">
             </a>
 
-
-            <nav class="navigation">
-
-                <a href="#games">
-                    Games
-                </a>
-
-                <a href="#tools">
-                    Code & Tools
-                </a>
-
-                <a href="#devlog">
-                    Dev Log
-                </a>
-
-                <a href="#about">
-                    About
-                </a>
-
-            </nav>
-
-
+            <!-- Mobile Menu Button -->
             <button
                 class="mobile-menu-button"
-                type="button"
-                aria-label="Open Menu"
-            >
-
+                id="mobileMenuButton"
+                aria-label="Open navigation menu"
+                aria-expanded="false">
                 ☰
-
             </button>
+
+            <nav class="navigation" id="mainNavigation">
+
+                <a href="#games">Games</a>
+
+                <a href="#tools">Code & Tools</a>
+
+                <a href="#devlog">Dev Log</a>
+
+                <a href="#about">About</a>
+
+            </nav>
 
         </div>
 
     </header>
 
 
+    <!-- =========================================
+         MAIN
+    ========================================== -->
 
-    <!-- =====================================
-         HERO
-    ====================================== -->
+    <main>
 
-    <section class="hero">
 
-        <div class="container hero-content">
+        <!-- =====================================
+             HERO
+        ====================================== -->
 
-            <div class="aio-hero-logo">
+        <section class="hero">
 
-                <img
-                    src="assets/aiodev.png"
-                    alt="AIO DEV — All In One Development"
-                >
+            <div class="container hero-content">
+
+                <div class="aio-hero-logo">
+                    <img src="assets/aiodev.png" alt="AIO DEV — All In One Development">
+                </div>
+
+                <p class="hero-description">
+                    Independent game development,
+                    programming, tools, experiments,
+                    and everything in between.
+                </p>
+
+                <a href="#games" class="button primary-button">
+                    EXPLORE GAMES
+                </a>
 
             </div>
 
+        </section>
 
-            <p class="hero-description">
 
-                Independent game development,
-                programming, tools, experiments,
-                and everything in between.
+        <!-- =====================================
+             SMALL NAVIGATION PANELS
+        ====================================== -->
 
-            </p>
+        <section class="aio-small-panels">
 
+            <div class="container">
 
-            <a
-                href="#games"
-                class="button primary-button"
-            >
+                <div class="aio-small-panel-grid">
 
-                EXPLORE GAMES →
-
-            </a>
-
-        </div>
-
-    </section>
-
-
-<!-- =====================================
-     SMALL NAVIGATION PANELS
-====================================== -->
-
-<section class="aio-small-panels">
-
-    <div class="container">
-
-        <div class="aio-small-panel-grid">
-
-            <a href="#games" class="aio-small-panel">
-
-                <span class="aio-small-panel-number">
-                    01
-                </span>
-
-                <div class="aio-small-panel-content">
-
-                    <span class="aio-small-panel-title">
-                        GAMES
-                    </span>
-
-                    <span class="aio-small-panel-arrow">
-                        →
-                    </span>
-
-                </div>
-
-            </a>
-
-
-            <a href="#tools" class="aio-small-panel">
-
-                <span class="aio-small-panel-number">
-                    02
-                </span>
-
-                <div class="aio-small-panel-content">
-
-                    <span class="aio-small-panel-title">
-                        CODE &amp; TOOLS
-                    </span>
-
-                    <span class="aio-small-panel-arrow">
-                        →
-                    </span>
-
-                </div>
-
-            </a>
-
-
-            <a href="#devlog" class="aio-small-panel">
-
-                <span class="aio-small-panel-number">
-                    03
-                </span>
-
-                <div class="aio-small-panel-content">
-
-                    <span class="aio-small-panel-title">
-                        DEV LOG
-                    </span>
-
-                    <span class="aio-small-panel-arrow">
-                        →
-                    </span>
-
-                </div>
-
-            </a>
-
-
-            <a href="#about" class="aio-small-panel">
-
-                <span class="aio-small-panel-number">
-                    04
-                </span>
-
-                <div class="aio-small-panel-content">
-
-                    <span class="aio-small-panel-title">
-                        ABOUT AIO DEV
-                    </span>
-
-                    <span class="aio-small-panel-arrow">
-                        →
-                    </span>
-
-                </div>
-
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-    <!-- =====================================
-         GAMES
-    ====================================== -->
-
-    <section
-        id="games"
-        class="section"
-    >
-
-        <div class="container">
-
-            <div class="section-heading">
-
-                <p class="section-label">
-                    CURRENT PROJECTS
-                </p>
-
-                <h2>
-                    Games
-                </h2>
-
-                <p>
-                    Games currently being developed
-                    by AIO DEV.
-                </p>
-
-            </div>
-
-
-            <div class="games-grid">
-
-
-                <!-- RUZTY NUTZ -->
-
-                <article class="game-card">
-
-                    <div class="game-image">
-
-                        <img
-                            src="assets/RuztyNutz.png"
-                            alt="Ruzty Nutz Racing"
-                        >
-
-                    </div>
-
-
-                    <div class="game-content">
-
-                        <div class="game-meta">
-
-                            <span class="game-status">
-                                IN DEVELOPMENT
-                            </span>
-
-                            <span class="platform-badge pc">
-                                PC
-                            </span>
-
+                    <a href="#games" class="aio-small-panel">
+                        <span class="aio-small-panel-number">01</span>
+                        <div class="aio-small-panel-content">
+                            <span class="aio-small-panel-title">GAMES</span>
+                            <span class="aio-small-panel-arrow">→</span>
                         </div>
+                    </a>
 
-
-                        <h3>
-                            Ruzty Nutz Racing
-                        </h3>
-
-
-                        <p class="game-tagline">
-                            Build it. Tune it. Race it.
-                        </p>
-
-
-                        <p>
-                            AIO DEV's racing project featuring
-                            custom vehicles, performance,
-                            racing and an expanding world.
-                        </p>
-
-
-                        <div class="game-buttons">
-
-                            <a
-                                href="ruzty-nutz.html"
-                                class="button primary-button"
-                            >
-                                VIEW GAME →
-                            </a>
-
+                    <a href="#tools" class="aio-small-panel">
+                        <span class="aio-small-panel-number">02</span>
+                        <div class="aio-small-panel-content">
+                            <span class="aio-small-panel-title">CODE &amp; TOOLS</span>
+                            <span class="aio-small-panel-arrow">→</span>
                         </div>
+                    </a>
 
-                    </div>
-
-                </article>
-
-
-
-                <!-- HIDDEN DIMENSIONS -->
-
-                <article class="game-card hidden-dimensions-card">
-
-                    <div class="game-image">
-
-                        <img
-                            src="assets/HiddenDimensions.png"
-                            alt="Hidden Dimensions"
-                        >
-
-                    </div>
-
-
-                    <div class="game-content">
-
-                        <div class="game-meta">
-
-                            <span class="game-status">
-                                IN DEVELOPMENT
-                            </span>
-
-                            <span class="platform-badge mobile">
-                                MOBILE
-                            </span>
-
+                    <a href="#devlog" class="aio-small-panel">
+                        <span class="aio-small-panel-number">03</span>
+                        <div class="aio-small-panel-content">
+                            <span class="aio-small-panel-title">DEV LOG</span>
+                            <span class="aio-small-panel-arrow">→</span>
                         </div>
+                    </a>
 
-
-                        <h3>
-                            Hidden Dimensions
-                        </h3>
-
-
-                        <p class="game-tagline">
-                            Some things are hidden for a reason.
-                        </p>
-
-
-                        <p>
-                            A mysterious puzzle experience
-                            built around exploration,
-                            discovery and hidden worlds.
-                        </p>
-
-
-                        <div class="game-buttons">
-
-                            <a
-                                href="hidden-dimensions.html"
-                                class="button primary-button"
-                            >
-                                VIEW GAME →
-                            </a>
-
+                    <a href="#about" class="aio-small-panel">
+                        <span class="aio-small-panel-number">04</span>
+                        <div class="aio-small-panel-content">
+                            <span class="aio-small-panel-title">ABOUT AIO DEV</span>
+                            <span class="aio-small-panel-arrow">→</span>
                         </div>
-
-                    </div>
-
-                </article>
-
-
-
-                <!-- ENDANGERED SPECIES -->
-
-                <article class="game-card">
-
-                    <div class="game-image">
-
-                        <img
-                            src="assets/EndangeredSpecies.png"
-                            alt="Endangered Species"
-                        >
-
-                    </div>
-
-
-                    <div class="game-content">
-
-                        <div class="game-meta">
-
-                            <span class="game-status">
-                                IN DEVELOPMENT
-                            </span>
-
-                            <span class="platform-badge pc">
-                                PC
-                            </span>
-
-                        </div>
-
-
-                        <h3>
-                            Endangered Species
-                        </h3>
-
-
-                        <p class="game-tagline">
-                            The world doesn't wait.
-                        </p>
-
-
-                        <p>
-                            An open-world survival concept
-                            focused on systems, wildlife,
-                            exploration and a living world.
-                        </p>
-
-
-                        <div class="game-buttons">
-
-                            <a
-                                href="endangered-species.html"
-                                class="button primary-button"
-                            >
-                                VIEW GAME →
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =====================================
-         CODE & TOOLS
-    ====================================== -->
-
-    <section
-        id="tools"
-        class="section section-dark"
-    >
-
-        <div class="container">
-
-            <div class="section-heading">
-
-                <p class="section-label">
-                    DEVELOPMENT
-                </p>
-
-                <h2>
-                    Code &amp; Tools
-                </h2>
-
-                <p>
-                    Frameworks, systems and tools
-                    built during development.
-                </p>
-
-            </div>
-
-
-            <div class="tool-card">
-
-                <div class="tool-icon">
-                    AIO
-                </div>
-
-
-                <div class="tool-content">
-
-                    <h3>
-                        AIO Development Framework
-                    </h3>
-
-
-                    <p>
-                        Reusable systems and tools created
-                        to support game development,
-                        experimentation and future projects.
-                    </p>
-
-
-                    <div class="tool-features">
-
-                        <span>
-                            UNITY
-                        </span>
-
-                        <span>
-                            C#
-                        </span>
-
-                        <span>
-                            GAME SYSTEMS
-                        </span>
-
-                        <span>
-                            TOOLS
-                        </span>
-
-                    </div>
-
-
-                    <a
-                        href="#"
-                        class="button secondary-button"
-                    >
-                        LEARN MORE →
                     </a>
 
                 </div>
 
             </div>
 
-        </div>
-
-    </section>
+        </section>
 
 
+        <!-- =====================================
+             GAMES
+        ====================================== -->
 
-    <!-- =====================================
-         DEV LOG
-    ====================================== -->
+        <section id="games" class="section">
 
-    <section
-        id="devlog"
-        class="section"
-    >
+            <div class="container">
 
-        <div class="container">
-
-            <div class="section-heading">
-
-                <p class="section-label">
-                    DEVELOPMENT LOG
-                </p>
-
-                <h2>
-                    Dev Log
-                </h2>
-
-                <p>
-                    Follow the process behind AIO DEV.
-                </p>
-
-            </div>
-
-
-            <article class="devlog-entry">
-
-                <div class="devlog-date">
-                    AIO DEV
-                </div>
-
-
-                <div class="devlog-content">
-
-                    <h3>
-                        Building From the Ground Up
-                    </h3>
-
-
-                    <p>
-                        Development notes, experiments,
-                        systems and progress from the
-                        projects being built at AIO DEV.
-                    </p>
-
-
-                    <a
-                        href="#"
-                        class="text-link"
-                    >
-                        READ DEVELOPMENT LOG →
-                    </a>
-
-                </div>
-
-            </article>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =====================================
-         ABOUT
-    ====================================== -->
-
-    <section
-        id="about"
-        class="section section-dark"
-    >
-
-        <div class="container">
-
-            <div class="about-section">
-
-
-                <div>
+                <div class="section-heading">
 
                     <p class="section-label">
-                        SYSTEM INFORMATION
+                        GAMES
+                    </p>
+
+                    <h2>
+                        MY GAMES
+                    </h2>
+
+                    <p>
+                        Games currently being developed
+                        by AIO DEV.
+                    </p>
+
+                </div>
+
+
+                <div class="games-grid">
+
+
+                    <!-- =========================
+                         RUZTY NUTZ RACING
+                    ========================== -->
+
+                    <article class="game-card">
+
+                        <div class="game-image">
+
+                            <span class="image-placeholder">
+                                RUZTY NUTZ RACING
+                            </span>
+
+                        </div>
+
+                        <div class="game-content">
+
+                            <div class="game-meta">
+
+                                <span class="game-status">
+                                    IN DEVELOPMENT
+                                </span>
+
+                                <span class="platform-badge pc">
+                                    PC
+                                </span>
+
+                            </div>
+
+                            <h3>
+                                Ruzty Nutz Racing
+                            </h3>
+
+                            <p class="game-tagline">
+                                Salvage. Build. Race.
+                            </p>
+
+                            <p>
+                                A racing game set on a battered planet
+                                scarred by generations of racing wars.
+
+                                Salvage wrecks, repair rare vehicles,
+                                find parts, and build machines worth racing.
+                            </p>
+
+                            <div class="game-buttons">
+
+                           <a href="games/ruzty-nutz-racing/"
+                               class="button primary-button">
+                                    VIEW GAME →
+                                    </a>                
+
+                              
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =========================
+                         ENDANGERED SPECIES
+                    ========================== -->
+
+                    <article class="game-card">
+
+                        <div class="game-image">
+
+                            <span class="image-placeholder">
+                                ENDANGERED SPECIES
+                            </span>
+
+                        </div>
+
+                        <div class="game-content">
+
+                            <div class="game-meta">
+
+                                <span class="game-status">
+                                    IN DEVELOPMENT
+                                </span>
+
+                                <span class="platform-badge pc">
+                                    PC
+                                </span>
+
+                            </div>
+
+                            <h3>
+                                Endangered Species
+                            </h3>
+
+                            <p class="game-tagline">
+                                Discover. Preserve. Explore.
+                            </p>
+
+                            <p>
+                                Explore distant planets in search of
+                                resources, minerals, crystals, and life.
+
+                                Discover endangered species and preserve
+                                what you find.
+                            </p>
+
+                            <div class="game-buttons">
+
+                               <a href="games/endangered-species/"
+                                class="button primary-button">
+                                VIEW GAME →
+                                </a>
+
+                               
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =========================
+                         ESMOBILE
+                    ========================== -->
+
+                    <article class="game-card">
+
+                        <div class="game-image">
+
+                            <span class="image-placeholder">
+                                ESMOBILE
+                            </span>
+
+                        </div>
+
+                        <div class="game-content">
+
+                            <div class="game-meta">
+
+                                <span class="game-status">
+                                    PLANNED
+                                </span>
+
+                                <span class="platform-badge mobile">
+                                    MOBILE
+                                </span>
+
+                            </div>
+
+                            <h3>
+                                ESmobile
+                            </h3>
+
+                            <p class="game-tagline">
+                                Endangered Species — Mobile
+                            </p>
+
+                            <p>
+                                A lightweight mobile experience
+                                set within the Endangered Species
+                                universe.
+                            </p>
+
+                            <div class="game-buttons">
+
+                               <a href="games/esmobile/"
+                                   class="button primary-button">
+                                    VIEW GAME →
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =========================
+                         GOLF
+                    ========================== -->
+
+                    <article class="game-card">
+
+                        <div class="game-image">
+
+                            <span class="image-placeholder">
+                                GOLF
+                            </span>
+
+                        </div>
+
+                        <div class="game-content">
+
+                            <div class="game-meta">
+
+                                <span class="game-status">
+                                    PLANNED
+                                </span>
+
+                                <span class="platform-badge mobile">
+                                    MOBILE
+                                </span>
+
+                            </div>
+
+                            <h3>
+                                Golf
+                            </h3>
+
+                            <p class="game-tagline">
+                                Learn the game. Master the strategy.
+                            </p>
+
+                            <p>
+                                A mobile version of a classic card game
+                                featuring AI opponents and multiplayer.
+                            </p>
+
+                            <div class="game-buttons">
+
+                                <a href="games/golf/"
+                                   class="button primary-button">
+                                    VIEW GAME →
+                                </a>            
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =========================
+                         HIDDEN DIMENSIONS
+                    ========================== -->
+
+                    <article class="game-card hidden-dimensions-card">
+
+                        <div class="game-image">
+
+                            <span class="image-placeholder">
+                                HIDDEN DIMENSIONS
+                            </span>
+
+                        </div>
+
+                        <div class="game-content">
+
+                            <div class="game-meta">
+
+                                <span class="game-status">
+                                    IN DEVELOPMENT
+                                </span>
+
+                                <span class="platform-badge mobile">
+                                    MOBILE
+                                </span>
+
+                            </div>
+
+                            <h3>
+                                Hidden Dimensions
+                            </h3>
+
+                            <p class="game-tagline">
+                                Discover what lies beyond.
+                            </p>
+
+                            <p>
+                                A mobile puzzle game built around
+                                exploration, hidden patterns,
+                                ancient writing, and dimensions
+                                that may not be what they seem.
+                            </p>
+
+                            <div class="game-buttons">
+
+                                <a href="games/hidden-dimensions/"
+                                   class="button primary-button">
+                                    VIEW GAME →
+                                </a>                    
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             CODE & TOOLS
+        ====================================== -->
+
+        <section id="tools" class="section section-dark">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <p class="section-label">
+                        DEVELOPMENT
+                    </p>
+
+                    <h2>
+                        CODE & TOOLS
+                    </h2>
+
+                    <p>
+                        Systems, frameworks, tools, and technology
+                        created during the development of AIO projects.
+                    </p>
+
+                </div>
+
+
+                <article class="tool-card">
+
+                    <div class="tool-icon">
+                        AIO
+                    </div>
+
+                    <div class="tool-content">
+
+                        <span class="game-status">
+                            UNITY FRAMEWORK
+                        </span>
+
+                        <h3>
+                            AIO Racing Framework
+                        </h3>
+
+                        <p>
+                            A modular racing framework being developed
+                            as the technology foundation for Ruzty Nutz
+                            Racing and future racing projects.
+                        </p>
+
+                        <div class="tool-features">
+
+                            <span>Vehicle Systems</span>
+
+                            <span>Race Management</span>
+
+                            <span>AI</span>
+
+                            <span>Garage Systems</span>
+
+                            <span>Vehicle Database</span>
+
+                            <span>Performance Systems</span>
+
+                        </div>
+
+                        <a href="#"
+                           class="button primary-button">
+                            EXPLORE FRAMEWORK
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             DEVELOPER LOG
+        ====================================== -->
+
+        <section id="devlog" class="section">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <p class="section-label">
+                        DEVELOPMENT
+                    </p>
+
+                    <h2>
+                        DEVELOPER LOG
+                    </h2>
+
+                    <p>
+                        Follow the development process,
+                        experiments, problems, solutions,
+                        and progress behind AIO DEV.
+                    </p>
+
+                </div>
+
+
+                <article class="devlog-entry">
+
+                    <div class="devlog-date">
+                        DEV LOG #001
+                    </div>
+
+                    <div class="devlog-content">
+
+                        <h3>
+                            Welcome to AIO DEV
+                        </h3>
+
+                        <p>
+                            The AIO DEV website is now under development.
+
+                            This site will become the home for my games,
+                            projects, experiments, tools, and development logs.
+                        </p>
+
+                        <a href="#"
+                           class="text-link">
+                            READ DEV LOG →
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             ABOUT
+        ====================================== -->
+
+        <section id="about" class="section section-dark">
+
+            <div class="container about-section">
+
+                <div class="section-heading">
+
+                    <p class="section-label">
+                        ABOUT
                     </p>
 
                     <h2>
@@ -632,30 +621,31 @@
                 <div class="about-content">
 
                     <p>
-
                         <strong>
                             All In One Development.
                         </strong>
-
                     </p>
-
 
                     <p>
-
-                        AIO DEV is an independent
-                        game development operation
-                        focused on building games,
-                        systems, tools and experiments
-                        from the ground up.
-
+                        AIO DEV is an independent development
+                        effort focused on Unity games, programming,
+                        reusable systems, tools, experimentation,
+                        and learning through building.
                     </p>
 
+                    <p>
+                        From computers and hardware to programming,
+                        game development, 3D, graphics, and software,
+                        AIO DEV is built around one simple idea:
+                    </p>
 
                     <p class="about-quote">
 
-                        One developer.
-                        One computer.
-                        A whole lot of ideas.
+                        Learn what is needed.
+                        Build it.
+                        Break it.
+                        Fix it.
+                        Keep learning.
 
                     </p>
 
@@ -663,15 +653,14 @@
 
             </div>
 
-        </div>
+        </section>
 
-    </section>
+    </main>
 
 
-
-    <!-- =====================================
+    <!-- =========================================
          FOOTER
-    ====================================== -->
+    ========================================== -->
 
     <footer class="site-footer">
 
@@ -679,9 +668,9 @@
 
             <div>
 
-                <div class="footer-logo">
+                <span class="footer-logo">
                     AIO DEV
-                </div>
+                </span>
 
                 <p>
                     All In One Development
@@ -689,66 +678,72 @@
 
             </div>
 
-
-            <div class="copyright">
-
-                <p>
-                    © AIO DEV
-                </p>
-
-            </div>
+            <p class="copyright">
+                © 2026 AIO DEV
+            </p>
 
         </div>
 
     </footer>
 
 
-
-    <!-- =====================================
-         MOBILE MENU
-    ====================================== -->
+    <!-- =========================================
+         MOBILE NAVIGATION SCRIPT
+    ========================================== -->
 
     <script>
 
-        const menuButton =
-            document.querySelector(".mobile-menu-button");
+        const mobileMenuButton =
+            document.getElementById("mobileMenuButton");
 
-        const navigation =
-            document.querySelector(".navigation");
+        const mainNavigation =
+            document.getElementById("mainNavigation");
 
 
-        if (menuButton && navigation) {
+        mobileMenuButton.addEventListener("click", function () {
 
-            menuButton.addEventListener(
-                "click",
-                function () {
+            const isOpen =
+                mainNavigation.classList.toggle("mobile-open");
 
-                    navigation.classList.toggle(
-                        "mobile-open"
-                    );
-
-                }
+            mobileMenuButton.setAttribute(
+                "aria-expanded",
+                isOpen
             );
 
+            mobileMenuButton.innerHTML =
+                isOpen ? "✕" : "☰";
 
-            navigation
-                .querySelectorAll("a")
-                .forEach(function (link) {
+        });
 
-                    link.addEventListener(
-                        "click",
-                        function () {
 
-                            navigation.classList.remove(
-                                "mobile-open"
-                            );
+        /*
+         * Close the mobile menu when a navigation
+         * link is selected.
+         */
 
-                        }
-                    );
+        const navigationLinks =
+            mainNavigation.querySelectorAll("a");
 
-                });
 
-        }
+        navigationLinks.forEach(function (link) {
+
+            link.addEventListener("click", function () {
+
+                mainNavigation.classList.remove(
+                    "mobile-open"
+                );
+
+                mobileMenuButton.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+                mobileMenuButton.innerHTML =
+                    "☰";
+
+            });
+
+        });
 
     </script>
 
