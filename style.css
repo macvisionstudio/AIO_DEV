@@ -2041,4 +2041,248 @@ button {
     }
 
 }
+   /* =========================================
+   SMALL AIO DEV NAVIGATION PANELS
+========================================= */
+
+.aio-small-panels {
+    position: relative;
+
+    padding: 28px 0;
+
+    background: #080808;
+
+    border-bottom: 1px solid #252525;
+}
+
+
+.aio-small-panel-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 12px;
+}
+
+
+/* PANEL */
+
+.aio-small-panel {
+
+    position: relative;
+
+    min-height: 78px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 14px 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #171717,
+            #0b0b0b
+        );
+
+    border: 1px solid #303030;
+
+    overflow: hidden;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+/* DISTRESSED TECHNICAL LINE */
+
+.aio-small-panel::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 3px;
+    height: 100%;
+
+    background: #444;
+
+    transition:
+        background 0.2s ease;
+}
+
+
+/* NUMBER */
+
+.aio-small-panel-number {
+
+    margin-right: 15px;
+
+    color: #555;
+
+    font-family:
+        "Courier New",
+        Courier,
+        monospace;
+
+    font-size: 0.65rem;
+
+    letter-spacing: 1px;
+}
+
+
+/* CONTENT */
+
+.aio-small-panel-content {
+
+    flex: 1;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 10px;
+}
+
+
+/* TITLE */
+
+.aio-small-panel-title {
+
+    color: #bbb;
+
+    font-size: 0.72rem;
+
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+}
+
+
+/* ARROW */
+
+.aio-small-panel-arrow {
+
+    color: #666;
+
+    font-size: 1rem;
+
+    transition:
+        transform 0.2s ease,
+        color 0.2s ease;
+}
+
+
+/* HOVER */
+
+.aio-small-panel:hover {
+
+    transform: translateY(-2px);
+
+    background:
+        linear-gradient(
+            135deg,
+            #202020,
+            #0d0d0d
+        );
+
+    border-color: #555;
+}
+
+
+.aio-small-panel:hover::before {
+
+    background: #aaa;
+}
+
+
+.aio-small-panel:hover
+.aio-small-panel-title {
+
+    color: #eeeeee;
+}
+
+
+.aio-small-panel:hover
+.aio-small-panel-arrow {
+
+    color: #eeeeee;
+
+    transform: translateX(4px);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .aio-small-panels {
+
+        padding: 18px 0;
+
+    }
+
+
+    .aio-small-panel-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 10px;
+
+    }
+
+
+    .aio-small-panel {
+
+        min-height: 65px;
+
+        padding: 12px;
+
+    }
+
+
+    .aio-small-panel-number {
+
+        margin-right: 9px;
+
+        font-size: 0.55rem;
+
+    }
+
+
+    .aio-small-panel-title {
+
+        font-size: 0.6rem;
+
+        letter-spacing: 1px;
+
+    }
+
+}
+
+
+@media (max-width: 420px) {
+
+    .aio-small-panel-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
 }
