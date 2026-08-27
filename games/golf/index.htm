@@ -1,1 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Golf | AIO DEV</title>
+
+    <link
+        rel="stylesheet"
+        href="../../style.css"
+    >
+
+    <style>
+
+        /* =========================================
+           GOLF HERO ART
+        ========================================= */
+
+        .golf-card-display {
+
+            width: min(500px, 90vw);
+
+            height: 230px;
+
+            margin: 30px 0;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            position: relative;
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    #242424 0%,
+                    #101010 55%,
+                    #070707 100%
+                );
+
+            border: 1px solid #444;
+
+        }
+
+
+        .golf-card {
+
+            position: absolute;
+
+            width: 85px;
+
+            height: 120px;
+
+            background: #111;
+
+            border: 1px solid #555;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color: #777;
+
+            font-size: 1.2rem;
+
+            font-weight: bold;
+
+        }
+
+
+        .golf-card:nth-child(1) {
+
+            transform:
+                translateX(-120px)
+                rotate(-15deg);
+
+        }
+
+
+        .golf-card:nth-child(2) {
+
+            transform:
+                translateX(-40px)
+                rotate(-5deg);
+
+        }
+
+
+        .golf-card:nth-child(3) {
+
+            transform:
+                translateX(40px)
+                rotate(5deg);
+
+        }
+
+
+        .golf-card:nth-child(4) {
+
+            transform:
+                translateX(120px)
+                rotate(15deg);
+
+        }
+
+
+        .golf-ball {
+
+            position: absolute;
+
+            width: 42px;
+
+            height: 42px;
+
+            border-radius: 50%;
+
+            background: #ddd;
+
+            border: 1px solid #fff;
+
+            bottom: 22px;
+
+            right: 70px;
+
+            opacity: .9;
+
+        }
+
+
+        @media (max-width: 700px) {
+
+            .golf-card-display {
+
+                height: 190px;
+
+            }
+
+
+            .golf-card {
+
+                width: 65px;
+
+                height: 95px;
+
+            }
+
+
+            .golf-card:nth-child(1) {
+                transform:
+                    translateX(-90px)
+                    rotate(-15deg);
+            }
+
+            .golf-card:nth-child(2) {
+                transform:
+                    translateX(-30px)
+                    rotate(-5deg);
+            }
+
+            .golf-card:nth-child(3) {
+                transform:
+                    translateX(30px)
+                    rotate(5deg);
+            }
+
+            .golf-card:nth-child(4) {
+                transform:
+                    translateX(90px)
+                    rotate(15deg);
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     HEADER
+========================================= -->
+
+<header class="site-header">
+
+    <div class="container nav-container">
+
+
+        <a
+            href="../../index.html"
+            class="aio-header-logo"
+        >
+
+            <img
+                src="../../assets/aiodev.png"
+                alt="AIO DEV"
+            >
+
+        </a>
+
+
+        <nav class="navigation">
+
+            <a href="../../index.html#games">
+                Games
+            </a>
+
+            <a href="../../index.html#tools">
+                Code &amp; Tools
+            </a>
+
+            <a href="../../index.html#devlog">
+                Dev Log
+            </a>
+
+            <a href="../../index.html#about">
+                About
+            </a>
+
+        </nav>
+
+
+        <button
+            class="mobile-menu-button"
+            type="button"
+            aria-label="Open Menu"
+        >
+
+            ☰
+
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================
+     HERO
+========================================= -->
+
+<section class="game-page-hero">
+
+    <div class="container">
+
+
+        <p class="hero-label">
+            AIO DEV // MOBILE CARD GAME
+        </p>
+
+
+        <h1>
+            GOLF
+        </h1>
+
+
+        <p class="game-page-tagline">
+            CARDS. STRATEGY. FRIENDS.
+        </p>
+
+
+
+        <div class="golf-card-display">
+
+
+            <div class="golf-card">
+                G
+            </div>
+
+            <div class="golf-card">
+                O
+            </div>
+
+            <div class="golf-card">
+                L
+            </div>
+
+            <div class="golf-card">
+                F
+            </div>
+
+
+            <div class="golf-ball"></div>
+
+
+        </div>
+
+
+
+        <div class="game-page-platform">
+
+            <span class="platform-badge mobile">
+                MOBILE
+            </span>
+
+            <span class="game-status">
+                IN CONCEPT / DEVELOPMENT
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     CONCEPT
+========================================= -->
+
+<section class="section">
+
+    <div class="container">
+
+
+        <div class="game-page-content">
+
+
+            <div>
+
+                <p class="section-label">
+                    THE CONCEPT
+                </p>
+
+
+                <h2>
+                    GOLF, BUILT FOR MOBILE.
+                </h2>
+
+            </div>
+
+
+
+            <div class="game-page-description">
+
+
+                <p>
+
+                    This project is a mobile golf card game
+                    designed around multiplayer play.
+
+                    The goal is to make the game easy to learn
+                    while leaving room for strategy,
+                    competition and different ways to play.
+
+                </p>
+
+
+                <p>
+
+                    Multiplayer is a core part of the idea,
+                    with players able to play with friends
+                    and compete against other players.
+
+                </p>
+
+
+                <p>
+
+                    AI opponents can also provide players
+                    with a way to practice or play when
+                    other players are unavailable.
+
+                </p>
+
+
+                <p>
+
+                    The exact rules, modes and progression
+                    systems can evolve as development continues.
+
+                </p>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     FEATURES
+========================================= -->
+
+<section class="section section-dark">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <p class="section-label">
+                FEATURES
+            </p>
+
+
+            <h2>
+                PLAY YOUR WAY.
+            </h2>
+
+
+            <p>
+
+                The foundation is intentionally flexible
+                so new modes and features can be added
+                as development continues.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="feature-grid">
+
+
+            <article class="feature-card">
+
+                <span class="feature-number">
+                    01 // MOBILE
+                </span>
+
+                <h3>
+                    BUILT FOR PHONES
+                </h3>
+
+                <p>
+
+                    Designed around quick sessions and
+                    controls that make sense on a mobile
+                    screen.
+
+                </p>
+
+            </article>
+
+
+
+            <article class="feature-card">
+
+                <span class="feature-number">
+                    02 // MULTIPLAYER
+                </span>
+
+                <h3>
+                    PLAY WITH OTHERS
+                </h3>
+
+                <p>
+
+                    Multiplayer is a core goal, allowing
+                    players to compete against friends
+                    and other players.
+
+                </p>
+
+            </article>
+
+
+
+            <article class="feature-card">
+
+                <span class="feature-number">
+                    03 // AI
+                </span>
+
+                <h3>
+                    AI OPPONENTS
+                </h3>
+
+                <p>
+
+                    Computer opponents can provide
+                    practice matches and an option
+                    for solo play.
+
+                </p>
+
+            </article>
+
+
+
+            <article class="feature-card">
+
+                <span class="feature-number">
+                    04 // MODES
+                </span>
+
+                <h3>
+                    MORE TO COME
+                </h3>
+
+                <p>
+
+                    Additional rules, modes and
+                    progression systems can grow
+                    around the core card-game
+                    experience.
+
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     STATUS
+========================================= -->
+
+<section class="section">
+
+    <div class="container game-download">
+
+
+        <p class="section-label">
+            STATUS
+        </p>
+
+
+        <h2>
+            COMING SOON
+        </h2>
+
+
+        <p>
+
+            The Golf card game is currently in
+            concept and development for mobile.
+
+        </p>
+
+
+        <a
+            href="../../index.html#games"
+            class="button secondary-button"
+        >
+
+            ← BACK TO GAMES
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer class="site-footer">
+
+    <div class="container footer-content">
+
+
+        <div>
+
+            <div class="footer-logo">
+                AIO DEV
+            </div>
+
+            <p>
+                All In One Development
+            </p>
+
+        </div>
+
+
+        <div class="copyright">
+
+            <p>
+                © AIO DEV
+            </p>
+
+        </div>
+
+
+    </div>
+
+</footer>
+
+
+
+<script>
+
+const menuButton =
+    document.querySelector(".mobile-menu-button");
+
+const navigation =
+    document.querySelector(".navigation");
+
+
+if (menuButton && navigation) {
+
+    menuButton.addEventListener(
+        "click",
+        () => {
+
+            navigation.classList.toggle(
+                "mobile-open"
+            );
+
+        }
+    );
+
+
+    navigation
+        .querySelectorAll("a")
+        .forEach(link => {
+
+            link.addEventListener(
+                "click",
+                () => {
+
+                    navigation.classList.remove(
+                        "mobile-open"
+                    );
+
+                }
+            );
+
+        });
+
+}
+
+</script>
+
+
+</body>
+
+</html>
