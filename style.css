@@ -2757,7 +2757,42 @@ button {
 
 }
 
+/* =========================================
+   GAME LOGOS
+========================================= */
 
+.game-image {
+    padding: 25px;
+
+    min-height: 260px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+
+.game-logo {
+    width: 100%;
+
+    max-width: 420px;
+
+    max-height: 210px;
+
+    object-fit: contain;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+.game-card:hover .game-logo {
+    transform: scale(1.04);
+}
 .download-button.disabled:hover {
 
     transform: none;
