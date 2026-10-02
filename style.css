@@ -126,6 +126,96 @@ button {
 
 
 /* =========================================
+   DEVELOPMENT FEED
+========================================= */
+
+.dev-feed {
+    padding: 100px 6%;
+    background: #080808;
+    color: #fff;
+}
+
+.dev-feed .section-heading {
+    margin-bottom: 45px;
+}
+
+.dev-feed-window {
+    max-width: 900px;
+    height: 420px;
+
+    margin: auto;
+
+    overflow: hidden;
+
+    border: 1px solid #292929;
+
+    background: #050505;
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.35);
+}
+
+.dev-feed-track {
+    animation: devFeedScroll 28s linear infinite;
+}
+
+.dev-update {
+    padding: 35px 40px;
+
+    border-bottom: 1px solid #222;
+}
+
+.dev-date {
+    display: block;
+
+    font-size: .7rem;
+
+    letter-spacing: 2px;
+
+    color: #777;
+
+    margin-bottom: 6px;
+}
+
+.dev-game {
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    color: #aaa;
+
+    font-size: .75rem;
+
+    letter-spacing: 2px;
+
+    font-weight: 900;
+}
+
+.dev-update h3 {
+    font-size: 1.5rem;
+
+    margin-bottom: 8px;
+}
+
+.dev-update p {
+    color: #888;
+
+    max-width: 700px;
+}
+
+@keyframes devFeedScroll {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-45%);
+    }
+
+}
+
+/* =========================================
    NAVIGATION
 ========================================= */
 
