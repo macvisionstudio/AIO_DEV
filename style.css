@@ -415,7 +415,275 @@ button {
 
     font-size: 1.05rem;
 }
+/* =========================================
+   AIO DEV HERO
+========================================= */
 
+.aio-hero {
+
+    min-height: 650px;
+
+    padding: 100px 4% 70px;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(190px, 240px)
+        minmax(300px, 1fr)
+        minmax(190px, 240px);
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 35px;
+
+    background: #050505;
+
+}
+
+
+/* =========================================
+   CENTER LOGO
+========================================= */
+
+.aio-hero-center {
+
+    text-align: center;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.aio-hero-logo {
+
+    width: min(430px, 90%);
+
+    height: auto;
+
+    display: block;
+
+}
+
+
+.aio-hero-subtitle {
+
+    margin-top: 18px;
+
+    color: #777;
+
+    font-size: .75rem;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+}
+
+
+/* =========================================
+   SIDE FEEDS
+========================================= */
+
+.hero-feed {
+
+    height: 280px;
+
+    overflow: hidden;
+
+    background: #0a0a0a;
+
+    border: 1px solid #292929;
+
+    position: relative;
+
+}
+
+
+.hero-feed-title {
+
+    padding: 12px 15px;
+
+    background: #0f0f0f;
+
+    border-bottom: 1px solid #292929;
+
+    color: #888;
+
+    font-size: .65rem;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+}
+
+
+.hero-feed-scroll {
+
+    animation:
+        heroFeedScroll 20s
+        linear
+        infinite;
+
+}
+
+
+.hero-feed:hover
+.hero-feed-scroll {
+
+    animation-play-state: paused;
+
+}
+
+
+/* =========================================
+   FEED ENTRIES
+========================================= */
+
+.hero-update {
+
+    padding: 18px 16px;
+
+    border-bottom: 1px solid #202020;
+
+}
+
+
+.hero-update span {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #555;
+
+    font-size: .6rem;
+
+    letter-spacing: 1px;
+
+}
+
+
+.hero-update strong {
+
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #ccc;
+
+    font-size: .72rem;
+
+    letter-spacing: 1px;
+
+}
+
+
+.hero-update p {
+
+    margin: 0;
+
+    color: #777;
+
+    font-size: .72rem;
+
+    line-height: 1.5;
+
+}
+
+
+/* =========================================
+   FEED ANIMATION
+========================================= */
+
+@keyframes heroFeedScroll {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    15% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-35%);
+    }
+
+    65% {
+        transform: translateY(-35%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .aio-hero {
+
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+        padding-top: 100px;
+
+    }
+
+
+    .aio-hero-center {
+
+        order: 1;
+
+    }
+
+
+    .hero-feed-left {
+
+        order: 2;
+
+    }
+
+
+    .hero-feed-right {
+
+        order: 3;
+
+    }
+
+
+    .hero-feed {
+
+        width: min(500px, 100%);
+
+        margin: auto;
+
+        height: 220px;
+
+    }
+
+
+    .aio-hero-logo {
+
+        width: min(360px, 80%);
+
+    }
+
+}
 
 /* =========================================
    BUTTONS
